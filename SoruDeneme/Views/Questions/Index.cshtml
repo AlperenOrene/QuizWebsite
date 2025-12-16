@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SoruDeneme.Models.Question>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChoiceA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChoiceB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChoiceC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorrectOption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quiz)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestionNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChoiceA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChoiceB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChoiceC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorrectOption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quiz.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

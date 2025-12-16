@@ -1,0 +1,14 @@
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+
+namespace SoruDeneme.Models
+{
+    public class Quiz
+    {
+        public int Id { get; set; }
+        public string QuizName { get; set; }
+        public string Genre { get; set; }
+
+        [ValidateNever]
+        public List<Question> questions { get; set; }
+    }
+}
