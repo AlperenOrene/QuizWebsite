@@ -148,6 +148,71 @@ namespace SoruDeneme.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Solve(int id, int order = 0, string selected = null)
+        {
+            string result = null;
+            int quizId = id;
+            if (selected != null)
+            {
+                var prevQuestion = await _context.Question
+                    .Where(q => q.QuizId == quizId)
+                    .OrderBy(q => q.QuestionNum)
+                    .Skip(order - 1)
+                    .FirstOrDefaultAsync();
+
+                if (prevQuestion != null)
+                    result = selected == prevQuestion.CorrectOption ? "Doğru" : "Yanlış";
+            }
+
+            var question = await _context.Question
+                .Where(q => q.QuizId == quizId)
+                .OrderBy(q => q.QuestionNum)
+                .Skip(order)
+                .FirstOrDefaultAsync();
+
+            var model = new SolveQuizViewModel
+            {
+                QuizId = quizId,
+                Order = order,
+                CurrentQuestion = question,
+                IsFinished = question == null
+            };
+
+            return View(model);
+        }
+        public async Task<IActionResult> GetQuestion(int quizId, int order)
+        {
+            var question = await _context.Question
+                .Where(q => q.QuizId == quizId)
+                .OrderBy(q => q.QuestionNum)
+                .Skip(order)
+                .FirstOrDefaultAsync();
+
+            if (question == null)
+            {
+                return Json(new { finished = true });
+            }
+
+            return Json(new
+            {
+                finished = false,
+                id = question.Id,
+                text = question.Text,
+                a = question.ChoiceA,
+                b = question.ChoiceB,
+                c = question.ChoiceC,
+                correct = question.CorrectOption
+            });
+        }
+        [HttpPost]
+        public IActionResult CheckAnswer(int questionId, string answer)
+        {
+            var question = _context.Question.Find(questionId);
+
+            bool correct = question.CorrectOption == answer;
+
+            return Json(correct);
+        }
 
         private bool QuizExists(int id)
         {

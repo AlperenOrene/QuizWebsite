@@ -344,3 +344,4 @@ C:\Users\Alperen\Desktop\web\SoruDeneme\SoruDeneme\obj\Debug\net10.0\refint\Soru
 C:\Users\Alperen\Desktop\web\SoruDeneme\SoruDeneme\obj\Debug\net10.0\SoruDeneme.pdb
 C:\Users\Alperen\Desktop\web\SoruDeneme\SoruDeneme\obj\Debug\net10.0\SoruDeneme.genruntimeconfig.cache
 C:\Users\Alperen\Desktop\web\SoruDeneme\SoruDeneme\obj\Debug\net10.0\ref\SoruDeneme.dll
+C:\Users\Alperen\Desktop\web\SoruDeneme\SoruDeneme\obj\Debug\net10.0\SoruDeneme.sourcelink.json

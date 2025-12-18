@@ -1,0 +1,32 @@
+﻿@model SolveQuizViewModel
+
+<h2>Quiz Solve</h2>
+
+@if (Model.IsFinished)
+{
+    <h3>🎉 Sorular bitmiştir</h3>
+}
+else
+{
+    <form asp-action="Solve" method="get">
+        <input type="hidden" name="quizId" value="@Model.QuizId" />
+        <input type="hidden" name="order" value="@(Model.Order + 1)" />
+
+        <p>
+            <strong>@(Model.Order + 1).</strong>
+            @Model.CurrentQuestion.Text
+        </p>
+
+        <button type="submit" name="selected" value="A">
+            @Model.CurrentQuestion.ChoiceA
+        </button><br />
+
+        <button type="submit" name="selected" value="B">
+            @Model.CurrentQuestion.ChoiceB
+        </button><br />
+
+        <button type="submit" name="selected" value="C">
+            @Model.CurrentQuestion.ChoiceC
+        </button>
+    </form>
+}

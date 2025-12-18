@@ -86,7 +86,7 @@ namespace SoruDeneme.Controllers
             ViewBag.QuizId = new SelectList(_context.Quiz, "Id", "QuizName", question.Id);
             return View(question);
         }
-
+       
         // POST: Questions/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
