@@ -13,20 +13,25 @@ namespace SoruDeneme.Controllers
         [HttpPost]
         public IActionResult Login(string userType, string username, string password)
         {
-            // Kullanıcı doğrulama işlemleri burada (Veritabanı kontrolü vb.)
-
-            // Eğer doğrulama başarılıysa:
-            if (userType == "Egitmen")
+            // 1. Durum: EĞİTMEN seçili VE bilgiler doğru mu?
+            if (userType == "Egitmen" && username == "eğitmen" && password == "eğitmen123")
             {
                 return RedirectToAction("EgitmenHome", "Home");
             }
-            else if (userType == "Ogrenci")
+
+            // 2. Durum: ÖĞRENCİ seçili VE bilgiler doğru mu?
+            else if (userType == "Ogrenci" && username == "öğrenci" && password == "öğrenci123")
             {
                 return RedirectToAction("OgrenciHome", "Home");
             }
 
-            ViewBag.Error = "İsim veya şifre hatalı";
-            return View();
+            // 3. Durum: Herhangi bir uyumsuzluk veya hata
+            else
+            {
+                // Kullanıcıya daha detaylı bilgi verebiliriz veya genel hata mesajı dönebiliriz.
+                ViewBag.Error = "Seçiminizle girdiğiniz bilgiler uyuşmuyor veya hatalı!";
+                return View("Index");
+            }
         }
     }
 }

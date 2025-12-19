@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\questions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\questions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -23,25 +27,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Questions\\Index.cshtml",
-              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Questions\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Questions\\Index.cshtml",
-              "RelativeToolTip": "SoruDeneme\\Views\\Questions\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-19T18:33:01.059Z",
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "SoruDeneme\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "SoruDeneme\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T18:43:09.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Questions\\Index.cshtml",
+              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Questions\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Questions\\Index.cshtml",
+              "RelativeToolTip": "SoruDeneme\\Views\\Questions\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T18:33:01.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Index.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Index.cshtml",
               "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Index.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwAMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-19T18:32:50.801Z",
               "EditorCaption": ""
