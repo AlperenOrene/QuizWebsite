@@ -1,9 +1,10 @@
 # QuizWebsite
 
-#eğitmen
+#isim: eğitmen
 
-#eğitmen123
+#şifre: eğitmen123
 
-#öğrenci
+ 
+#isim: öğrenci
 
-#öğrenci123
+şifre: öğrenci123
