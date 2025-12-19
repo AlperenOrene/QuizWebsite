@@ -19,7 +19,6 @@ namespace SoruDeneme.Controllers
             _context = context;
         }
 
-        // GET: Quizs
         public async Task<IActionResult> Index()
         {
             return View(await _context.Quiz.ToListAsync());

@@ -1,5 +1,4 @@
-﻿﻿@* En üste alıyoruz *@
-@{
+﻿@{
     Layout = null;
 }
 
@@ -9,7 +8,6 @@
     <meta charset="UTF-8">
     <title>QuizApp - Giriş</title>
     <style>
-        /* Mevcut CSS stillerin aynen kalabilir, burayı kısa tutuyorum */
         body {
             margin: 0;
             height: 100vh;
@@ -62,12 +60,10 @@
     <div class="login-container">
         <h2>QuizApp Giriş</h2>
 
-        @* Action kısmını Index yaptık, çünkü veriyi HomeController içindeki Index [HttpPost] metoduna göndereceğiz *@
         <form method="post" action="/Home/Index">
 
             <div class="roles">
                 <label>
-                    @* Name değerini 'userType' yapıyoruz (Controller parametresi ile aynı) *@
                     <input type="radio" name="userType" value="Egitmen" required checked>
                     Eğitmen
                 </label>
@@ -78,7 +74,6 @@
                 </label>
             </div>
 
-            @* Name değerlerini 'Isim' ve 'Sifre' olarak güncelliyoruz *@
             <input type="text" name="Isim" placeholder="İsim" required>
             <input type="password" name="Sifre" placeholder="Şifre" required>
 

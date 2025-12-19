@@ -28,18 +28,14 @@
 <body class="h-100">
     <header>
         @{
-            // Mevcut sayfa bilgilerini al
             var currentController = ViewContext.RouteData.Values["Controller"]?.ToString();
             var currentAction = ViewContext.RouteData.Values["Action"]?.ToString();
 
-            // Login sayfasında navbar gizlensin mi?
             bool isLoginPage = (currentController == "Login" && currentAction == "Index");
 
-            // --- YÖNLENDİRME AYARLARI ---
-            string destController = "Login"; // Varsayılan Controller
-            string destAction = "Index";     // Varsayılan Action
+            string destController = "Login"; 
+            string destAction = "Index";     
 
-            // Session'dan rolü oku
             string userRole = Context.Session.GetString("UserRole");
 
             if (!string.IsNullOrEmpty(userRole))
@@ -62,7 +58,6 @@
             <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom shadow mb-4 py-4">
                 <div class="container-fluid d-flex justify-content-start align-items-center">
 
-                    @* Logo Linki: Session'a göre belirlenen yere gider *@
                     <a class="navbar-brand fw-bold fs-2 text-dark"
                        asp-area=""
                        asp-controller="@destController"
@@ -78,7 +73,6 @@
                         </li>
                     </ul>
 
-                    @* Giriş yapılmışsa Çıkış butonu göster (İsteğe bağlı) *@
                     @if (!string.IsNullOrEmpty(userRole))
                     {
                         <ul class="navbar-nav ms-auto">

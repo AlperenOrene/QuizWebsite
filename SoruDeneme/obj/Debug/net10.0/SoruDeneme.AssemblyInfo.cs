@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SoruDeneme")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cf2f4f33633e5c5ff63a51ddf770d0d8f134e5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d541ed1c77878fae900f48939ae5aa4eff9c570f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SoruDeneme")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SoruDeneme")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

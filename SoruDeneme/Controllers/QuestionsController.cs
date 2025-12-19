@@ -19,14 +19,12 @@ namespace SoruDeneme.Controllers
             _context = context;
         }
 
-        // GET: Questions
         public async Task<IActionResult> Index()
         {
             var soruDenemeContext = _context.Question.Include(q => q.Quiz);
             return View(await soruDenemeContext.ToListAsync());
         }
 
-        // GET: Questions/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -45,16 +43,13 @@ namespace SoruDeneme.Controllers
             return View(question);
         }
 
-        // GET: Questions/Create
         public IActionResult Create()
         {
             ViewBag.QuizId = new SelectList(_context.Quiz, "Id", "QuizName");
             return View();
         }
 
-        // POST: Questions/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Text,QuestionNum,ChoiceA,ChoiceB,ChoiceC,CorrectOption,QuizId")] Question question)
@@ -70,7 +65,6 @@ namespace SoruDeneme.Controllers
             return View(question);
         }
 
-        // GET: Questions/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
