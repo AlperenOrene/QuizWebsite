@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\quizs\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -90,11 +98,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SoruDeneme\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAgwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T19:18:19.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Program.cs",
+              "RelativeDocumentMoniker": "SoruDeneme\\Program.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Program.cs",
+              "RelativeToolTip": "SoruDeneme\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T19:18:13.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Index.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Index.cshtml",
@@ -107,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Questions\\Index.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Questions\\Index.cshtml",
@@ -120,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Questions\\Edit.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Questions\\Edit.cshtml",
@@ -133,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Questions\\Details.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Questions\\Details.cshtml",
@@ -146,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Questions\\Delete.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Questions\\Delete.cshtml",
@@ -159,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Create.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Create.cshtml",
@@ -172,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Delete.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Delete.cshtml",
@@ -185,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Details.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Details.cshtml",
@@ -198,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Solve.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Solve.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Solve.cshtml",
@@ -211,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Questions\\Create.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Questions\\Create.cshtml",
@@ -224,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Edit.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Edit.cshtml",
@@ -237,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Login\\Index.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Login\\Index.cshtml",
@@ -250,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\Privacy.cshtml",
@@ -263,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "OgrenciHome.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
@@ -276,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\Index.cshtml",
@@ -289,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "EgitmenHome.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
@@ -302,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "QuizsController.cs",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Controllers\\QuizsController.cs",
               "RelativeDocumentMoniker": "SoruDeneme\\Controllers\\QuizsController.cs",
@@ -315,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "QuestionsController.cs",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Controllers\\QuestionsController.cs",
               "RelativeDocumentMoniker": "SoruDeneme\\Controllers\\QuestionsController.cs",
@@ -328,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "SoruDeneme\\Controllers\\LoginController.cs",
@@ -341,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "SoruDeneme\\Controllers\\HomeController.cs",
