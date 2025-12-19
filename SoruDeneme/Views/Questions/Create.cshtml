@@ -4,69 +4,81 @@
     ViewData["Title"] = "Yeni Soru Ekle";
 }
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card shadow">
-                <div class="card-header bg-success text-white">
-                    <h3 class="card-title mb-0">Yeni Soru Ekle</h3>
-                </div>
-                <div class="card-body">
-                    <form asp-action="Create">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<style>
+    .page-scale {
+        transform: scale(1.3);
+        transform-origin: top center;
+        width: 100%;
+        margin-bottom: 150px;
+    }
+</style>
 
-                        <div class="form-group mb-3">
-                            <label asp-for="QuizId" class="control-label fw-bold">Hangi Sınava Eklenecek?</label>
-                            <select asp-for="QuizId" class="form-control" asp-items="ViewBag.QuizId"></select>
-                        </div>
+<div class="page-scale">
 
-                        <div class="form-group mb-3">
-                            <label asp-for="QuestionNum" class="control-label fw-bold">Soru Numarası</label>
-                            <input asp-for="QuestionNum" class="form-control" type="number" />
-                            <span asp-validation-for="QuestionNum" class="text-danger"></span>
-                        </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="card-title mb-0">Yeni Soru Ekle</h3>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                        <div class="form-group mb-3">
-                            <label asp-for="Text" class="control-label fw-bold">Soru Metni</label>
-                            <textarea asp-for="Text" class="form-control" rows="3" placeholder="Soruyu buraya yazınız..."></textarea>
-                            <span asp-validation-for="Text" class="text-danger"></span>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4 mb-3">
-                                <label asp-for="ChoiceA" class="control-label">A Şıkkı</label>
-                                <input asp-for="ChoiceA" class="form-control" />
-                                <span asp-validation-for="ChoiceA" class="text-danger"></span>
+                            <div class="form-group mb-3">
+                                <label asp-for="QuizId" class="control-label fw-bold">Hangi Sınava Eklenecek?</label>
+                                <select asp-for="QuizId" class="form-control" asp-items="ViewBag.QuizId"></select>
                             </div>
-                            <div class="col-md-4 mb-3">
-                                <label asp-for="ChoiceB" class="control-label">B Şıkkı</label>
-                                <input asp-for="ChoiceB" class="form-control" />
-                                <span asp-validation-for="ChoiceB" class="text-danger"></span>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label asp-for="ChoiceC" class="control-label">C Şıkkı</label>
-                                <input asp-for="ChoiceC" class="form-control" />
-                                <span asp-validation-for="ChoiceC" class="text-danger"></span>
-                            </div>
-                        </div>
 
-                        <div class="form-group mb-4">
-                            <label asp-for="CorrectOption" class="control-label fw-bold text-success">Doğru Cevap (A, B veya C)</label>
-                            <input asp-for="CorrectOption" class="form-control border-success" placeholder="Örn: A" />
-                            <span asp-validation-for="CorrectOption" class="text-danger"></span>
-                        </div>
+                            <div class="form-group mb-3">
+                                <label asp-for="QuestionNum" class="control-label fw-bold">Soru Numarası</label>
+                                <input asp-for="QuestionNum" class="form-control" type="number" />
+                                <span asp-validation-for="QuestionNum" class="text-danger"></span>
+                            </div>
 
-                        <div class="d-grid gap-2">
-                            <input type="submit" value="Soruyu Kaydet" class="btn btn-success btn-lg" />
-                            <a asp-action="Index" class="btn btn-secondary">Listeye Geri Dön</a>
-                        </div>
-                    </form>
+                            <div class="form-group mb-3">
+                                <label asp-for="Text" class="control-label fw-bold">Soru Metni</label>
+                                <textarea asp-for="Text" class="form-control" rows="3" placeholder="Soruyu buraya yazınız..."></textarea>
+                                <span asp-validation-for="Text" class="text-danger"></span>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="ChoiceA" class="control-label">A Şıkkı</label>
+                                    <input asp-for="ChoiceA" class="form-control" />
+                                    <span asp-validation-for="ChoiceA" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="ChoiceB" class="control-label">B Şıkkı</label>
+                                    <input asp-for="ChoiceB" class="form-control" />
+                                    <span asp-validation-for="ChoiceB" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="ChoiceC" class="control-label">C Şıkkı</label>
+                                    <input asp-for="ChoiceC" class="form-control" />
+                                    <span asp-validation-for="ChoiceC" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label asp-for="CorrectOption" class="control-label fw-bold text-success">Doğru Cevap (A, B veya C)</label>
+                                <input asp-for="CorrectOption" class="form-control border-success" placeholder="Örn: A" />
+                                <span asp-validation-for="CorrectOption" class="text-danger"></span>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <input type="submit" value="Soruyu Kaydet" class="btn btn-success btn-lg" />
+                                <a asp-action="Index" class="btn btn-secondary">Listeye Geri Dön</a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
+</div>
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

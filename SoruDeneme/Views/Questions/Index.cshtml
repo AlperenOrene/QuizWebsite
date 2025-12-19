@@ -1,60 +1,71 @@
-﻿
-
-@model IEnumerable<SoruDeneme.Models.Question>
+﻿@model IEnumerable<SoruDeneme.Models.Question>
 
 @{
     ViewData["Title"] = "Sorular";
 }
 
-<div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1 class="display-6 fw-bold text-success">SORULAR</h1>
+<style>
+    .page-scale {
+        transform: scale(1.5); /* Büyütme oranı */
+        transform-origin: top center; /* Büyüme merkezi */
+        width: 100%;
+        margin-bottom: 150px; /* Alt boşluk */
+    }
+</style>
 
-        <a asp-action="Create" class="btn btn-success">
-            + Yeni Soru Ekle
-        </a>
+<div class="page-scale">
+
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="display-6 fw-bold text-success">SORULAR</h1>
+
+            <a asp-action="Create" class="btn btn-success">
+                + Yeni Soru Ekle
+            </a>
+        </div>
+
+        <table class="table table-hover shadow-sm border rounded">
+            <thead class="table-light">
+                <tr>
+                    <th>No</th>
+                    <th>Soru Metni</th>
+                    <th>Doğru Cevap</th>
+                    <th>Sınav</th>
+                    <th class="text-end">İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.QuestionNum)
+                        </td>
+                        <td>
+                            @if (item.Text != null && item.Text.Length > 50)
+                            {
+                                @item.Text.Substring(0, 50) <text>...</text>
+                            }
+                            else
+                            {
+                                @Html.DisplayFor(modelItem => item.Text)
+                            }
+                        </td>
+                        <td class="fw-bold text-success">
+                            @Html.DisplayFor(modelItem => item.CorrectOption)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quiz.QuizName)
+                        </td>
+                        <td class="text-end">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning text-white">Düzenle</a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info text-white">Detaylar</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 
-    <table class="table table-hover shadow-sm border rounded">
-        <thead class="table-light">
-            <tr>
-                <th>No</th>
-                <th>Soru Metni</th>
-                <th>Doğru Cevap</th>
-                <th>Sınav</th>
-                <th class="text-end">İşlemler</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.QuestionNum)
-                    </td>
-                    <td>
-                        @if (item.Text != null && item.Text.Length > 50)
-                        {
-                            @item.Text.Substring(0, 50) <text>...</text>
-                        }
-                        else
-                        {
-                            @Html.DisplayFor(modelItem => item.Text)
-                        }
-                    </td>
-                    <td class="fw-bold text-success">
-                        @Html.DisplayFor(modelItem => item.CorrectOption)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Quiz.QuizName)
-                    </td>
-                    <td class="text-end">
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning text-white">Düzenle</a>
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info text-white">Detaylar</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Sil</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
 </div>

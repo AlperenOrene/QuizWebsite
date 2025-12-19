@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\quizs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\quizs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\quizs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\quizs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\quizs\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Program.cs",
-              "RelativeDocumentMoniker": "SoruDeneme\\Program.cs",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Program.cs",
-              "RelativeToolTip": "SoruDeneme\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwC0AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T18:47:49.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SoruDeneme\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAgwG4AAAAHAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Details.cshtml",
+              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Details.cshtml",
+              "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Details.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-19T18:50:54.573Z",
+              "WhenOpened": "2025-12-19T19:09:19.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "SoruDeneme\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "SoruDeneme\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwDYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T18:43:09.592Z",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Delete.cshtml",
+              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Delete.cshtml",
+              "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Delete.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAowDQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T19:09:19.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Create.cshtml",
+              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Create.cshtml",
+              "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T19:09:18.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Edit.cshtml",
+              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Edit.cshtml",
+              "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Edit.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowDsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T19:09:20.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Solve.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Solve.cshtml",
+              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Solve.cshtml",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Solve.cshtml",
+              "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Solve.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T19:09:21.225Z",
               "EditorCaption": ""
             }
           ]

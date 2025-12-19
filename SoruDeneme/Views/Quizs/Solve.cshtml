@@ -1,32 +1,48 @@
 ﻿@model SolveQuizViewModel
 
-<h2>Quiz Solve</h2>
+<style>
+    .page-scale {
+        transform: scale(1.3); /* Büyütme oranı */
+        transform-origin: top center; /* Büyüme merkezi */
+        width: 100%;
+        margin-bottom: 150px; /* Alt boşluk */
+    }
+</style>
 
-@if (Model.IsFinished)
-{
-    <h3>🎉 Sorular bitmiştir</h3>
-}
-else
-{
-    <form asp-action="Solve" method="get">
-        <input type="hidden" name="quizId" value="@Model.QuizId" />
-        <input type="hidden" name="order" value="@(Model.Order + 1)" />
+<div class="page-scale">
+    <div class="container mt-5">
+        <h2>Quiz Solve</h2>
 
-        <p>
-            <strong>@(Model.Order + 1).</strong>
-            @Model.CurrentQuestion.Text
-        </p>
+        @if (Model.IsFinished)
+        {
+            <h3>🎉 Sorular bitmiştir</h3>
+        }
+        else
+        {
+            <form asp-action="Solve" method="get">
+                <input type="hidden" name="quizId" value="@Model.QuizId" />
+                <input type="hidden" name="order" value="@(Model.Order + 1)" />
 
-        <button type="submit" name="selected" value="A">
-            @Model.CurrentQuestion.ChoiceA
-        </button><br />
+                <p class="fs-4">
+                    <strong>@(Model.Order + 1).</strong>
+                    @Model.CurrentQuestion.Text
+                </p>
 
-        <button type="submit" name="selected" value="B">
-            @Model.CurrentQuestion.ChoiceB
-        </button><br />
+                <div class="d-grid gap-2 col-md-6">
+                    <button type="submit" name="selected" value="A" class="btn btn-outline-primary text-start">
+                        <strong>A)</strong> @Model.CurrentQuestion.ChoiceA
+                    </button>
 
-        <button type="submit" name="selected" value="C">
-            @Model.CurrentQuestion.ChoiceC
-        </button>
-    </form>
-}
+                    <button type="submit" name="selected" value="B" class="btn btn-outline-primary text-start">
+                        <strong>B)</strong> @Model.CurrentQuestion.ChoiceB
+                    </button>
+
+                    <button type="submit" name="selected" value="C" class="btn btn-outline-primary text-start">
+                        <strong>C)</strong> @Model.CurrentQuestion.ChoiceC
+                    </button>
+                </div>
+            </form>
+        }
+
+    </div>
+</div>

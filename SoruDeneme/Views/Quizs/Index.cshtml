@@ -1,48 +1,60 @@
-﻿
-@model IEnumerable<SoruDeneme.Models.Quiz>
+﻿@model IEnumerable<SoruDeneme.Models.Quiz>
 
 @{
     ViewData["Title"] = "Sınavlar";
 }
 
-<div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1 class="display-6 fw-bold text-primary">SINAVLAR</h1>
+<style>
+    .page-scale {
+        transform: scale(1.5); /* 👉 BURADAN BÜYÜTÜP KÜÇÜLTEBİLİRSİN (1.3 = %130) */
+        transform-origin: top center; /* Büyürken sayfanın üst ortasından başlar, kaymayı engeller */
+        width: 100%; /* Genişliği korur */
+        margin-bottom: 150px; /* Büyüyünce alt tarafın kesilmemesi için boşluk */
+    }
+</style>
 
-        <a asp-action="Create" class="btn btn-success">
-            + Yeni Sınav Oluştur
-        </a>
+<div class="page-scale">
+
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="display-6 fw-bold text-primary">SINAVLAR</h1>
+
+            <a asp-action="Create" class="btn btn-success">
+                + Yeni Sınav Oluştur
+            </a>
+        </div>
+
+        <table class="table table-hover shadow-sm border rounded">
+            <thead class="table-light">
+                <tr>
+                    <th>
+                        Sınav Adı
+                    </th>
+                    <th>
+                        Tür / Kategori
+                    </th>
+                    <th class="text-end">İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.QuizName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Genre)
+                        </td>
+                        <td class="text-end">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning text-white">Düzenle</a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info text-white">Detaylar</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 
-    <table class="table table-hover shadow-sm border rounded">
-        <thead class="table-light">
-            <tr>
-                <th>
-                    Sınav Adı
-                </th>
-                <th>
-                    Tür / Kategori
-                </th>
-                <th class="text-end">İşlemler</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.QuizName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Genre)
-                    </td>
-                    <td class="text-end">
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning text-white">Düzenle</a>
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info text-white">Detaylar</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Sil</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
 </div>

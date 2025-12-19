@@ -4,37 +4,50 @@
     ViewData["Title"] = "Sınavı Sil";
 }
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
+<style>
+    .page-scale {
+        transform: scale(1.3); /* Büyütme oranı */
+        transform-origin: top center; /* Büyüme merkezi */
+        width: 100%;
+        margin-bottom: 150px; /* Alt boşluk */
+    }
+</style>
 
-            <div class="card shadow border-danger">
-                <div class="card-header bg-danger text-white">
-                    <h3 class="card-title mb-0">Silmek İstediğinize Emin misiniz?</h3>
+<div class="page-scale">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <div class="card shadow border-danger">
+                    <div class="card-header bg-danger text-white">
+                        <h3 class="card-title mb-0">Silmek İstediğinize Emin misiniz?</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead text-center text-danger mb-4">
+                            Aşağıdaki sınav kalıcı olarak silinecektir!
+                        </p>
+
+                        <dl class="row justify-content-center border rounded p-3 bg-light mx-2">
+                            <dt class="col-sm-4">Sınav Adı:</dt>
+                            <dd class="col-sm-8 fw-bold">@Html.DisplayFor(model => model.QuizName)</dd>
+
+                            <dt class="col-sm-4">Tür:</dt>
+                            <dd class="col-sm-8">@Html.DisplayFor(model => model.Genre)</dd>
+                        </dl>
+
+                        <form asp-action="Delete" class="mt-4 text-center">
+                            <input type="hidden" asp-for="Id" />
+                            <div class="d-grid gap-2">
+                                <input type="submit" value="Evet, Sınavı Sil" class="btn btn-danger btn-lg" />
+                                <a asp-action="Index" class="btn btn-secondary">İptal / Listeye Dön</a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p class="lead text-center text-danger mb-4">
-                        Aşağıdaki sınav kalıcı olarak silinecektir!
-                    </p>
 
-                    <dl class="row justify-content-center border rounded p-3 bg-light mx-2">
-                        <dt class="col-sm-4">Sınav Adı:</dt>
-                        <dd class="col-sm-8 fw-bold">@Html.DisplayFor(model => model.QuizName)</dd>
-
-                        <dt class="col-sm-4">Tür:</dt>
-                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Genre)</dd>
-                    </dl>
-
-                    <form asp-action="Delete" class="mt-4 text-center">
-                        <input type="hidden" asp-for="Id" />
-                        <div class="d-grid gap-2">
-                            <input type="submit" value="Evet, Sınavı Sil" class="btn btn-danger btn-lg" />
-                            <a asp-action="Index" class="btn btn-secondary">İptal / Listeye Dön</a>
-                        </div>
-                    </form>
-                </div>
             </div>
-
         </div>
     </div>
+
 </div>
