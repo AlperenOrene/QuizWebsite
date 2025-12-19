@@ -28,38 +28,65 @@
 <body class="h-100">
     <header>
         @{
-            var controller = ViewContext.RouteData.Values["Controller"]?.ToString();
-            var action = ViewContext.RouteData.Values["Action"]?.ToString();
-            bool isLoginPage = (controller == "Home" && action == "Index");
+            // Mevcut sayfa bilgilerini al
+            var currentController = ViewContext.RouteData.Values["Controller"]?.ToString();
+            var currentAction = ViewContext.RouteData.Values["Action"]?.ToString();
+
+            // Login sayfasında navbar gizlensin mi?
+            bool isLoginPage = (currentController == "Login" && currentAction == "Index");
+
+            // --- YÖNLENDİRME AYARLARI ---
+            string destController = "Login"; // Varsayılan Controller
+            string destAction = "Index";     // Varsayılan Action
+
+            // Session'dan rolü oku
+            string userRole = Context.Session.GetString("UserRole");
+
+            if (!string.IsNullOrEmpty(userRole))
+            {
+                if (userRole == "Egitmen")
+                {
+                    destController = "Home";
+                    destAction = "EgitmenHome";
+                }
+                else if (userRole == "Ogrenci")
+                {
+                    destController = "Home";
+                    destAction = "OgrenciHome";
+                }
+            }
         }
 
         @if (!isLoginPage)
         {
             <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom shadow mb-4 py-4">
                 <div class="container-fluid d-flex justify-content-start align-items-center">
-                    @{
-                        string destination = "Index";
-                        if (controller == "Quizs" || action == "EgitmenHome")
-                        {
-                            destination = "EgitmenHome";
-                        }
-                        else if (action == "OgrenciHome")
-                        {
-                            destination = "OgrenciHome";
-                        }
-                    }
 
-                    @* Logo *@
-                    <a class="navbar-brand fw-bold fs-2 text-dark" asp-area="" asp-controller="Home" asp-action="@destination">QuizApp</a>
+                    @* Logo Linki: Session'a göre belirlenen yere gider *@
+                    <a class="navbar-brand fw-bold fs-2 text-dark"
+                       asp-area=""
+                       asp-controller="@destController"
+                       asp-action="@destAction">
+                        QuizApp
+                    </a>
 
                     <span class="navbar-divider" style="height: 35px;"></span>
 
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            @* BURASI DEĞİŞTİ: fw-bold kaldırıldı, sadece fs-3 kaldı *@
                             <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
                         </li>
                     </ul>
+
+                    @* Giriş yapılmışsa Çıkış butonu göster (İsteğe bağlı) *@
+                    @if (!string.IsNullOrEmpty(userRole))
+                    {
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" asp-controller="Login" asp-action="Logout">Çıkış</a>
+                            </li>
+                        </ul>
+                    }
                 </div>
             </nav>
         }
