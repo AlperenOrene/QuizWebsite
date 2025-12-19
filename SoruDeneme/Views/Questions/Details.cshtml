@@ -1,60 +1,40 @@
 ﻿@model SoruDeneme.Models.Question
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Soru Detayları";
 }
 
-<h1>Details</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-info">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title mb-0">Soru Detayları (No: @Model.QuestionNum)</h3>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">@Html.DisplayFor(model => model.Text)</h4>
 
-<div>
-    <h4>Question</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Text)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Text)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.QuestionNum)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.QuestionNum)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ChoiceA)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ChoiceA)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ChoiceB)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ChoiceB)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ChoiceC)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ChoiceC)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CorrectOption)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CorrectOption)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Quiz)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Quiz.Id)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item"><strong>A)</strong> @Html.DisplayFor(model => model.ChoiceA)</li>
+                        <li class="list-group-item"><strong>B)</strong> @Html.DisplayFor(model => model.ChoiceB)</li>
+                        <li class="list-group-item"><strong>C)</strong> @Html.DisplayFor(model => model.ChoiceC)</li>
+                    </ul>
+
+                    <div class="alert alert-success mt-3">
+                        <strong>Doğru Cevap:</strong> @Html.DisplayFor(model => model.CorrectOption)
+                    </div>
+
+                    <div class="text-muted mt-2">
+                        <small>Ait Olduğu Sınav: @Html.DisplayFor(model => model.Quiz.QuizName)</small>
+                    </div>
+                </div>
+                <div class="card-footer bg-white">
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-outline-secondary">&larr; Listeye Dön</a>
+                        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning text-white">Düzenle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,5 +1,4 @@
-﻿@* En üste alıyoruz *@
-@{
+﻿@{
     Layout = null;
 }
 
@@ -9,7 +8,6 @@
     <meta charset="UTF-8">
     <title>QuizApp - Giriş</title>
     <style>
-        /* Mevcut CSS stillerin aynen kalabilir, burayı kısa tutuyorum */
         body {
             margin: 0;
             height: 100vh;
@@ -18,6 +16,11 @@
             align-items: center;
             background-color: #f2f2f2;
             font-family: Arial, sans-serif;
+        }
+
+        .login-scale {
+            transform: scale(1.8);
+            transform-origin: center;
         }
 
         .login-container {
@@ -29,11 +32,14 @@
             text-align: center;
         }
 
-            .login-container input[type="text"], .login-container input[type="password"], .login-container button {
+            .login-container input[type="text"],
+            .login-container input[type="password"],
+            .login-container button {
                 width: 100%;
                 box-sizing: border-box;
                 padding: 10px;
                 margin: 8px 0;
+                font-size: 14px;
             }
 
         .roles {
@@ -46,6 +52,7 @@
                 display: flex;
                 align-items: center;
                 gap: 5px;
+                font-size: 14px;
             }
 
         .login-container button {
@@ -59,36 +66,38 @@
 </head>
 <body>
 
-    <div class="login-container">
-        <h2>QuizApp Giriş</h2>
+    <div class="login-scale">
+        <div class="login-container">
+            <h2>QuizApp Giriş</h2>
 
-        @* Action kısmını Index yaptık, çünkü veriyi HomeController içindeki Index [HttpPost] metoduna göndereceğiz *@
-        <form method="post" action="/Home/Index">
+            <form method="post" asp-controller="Login" asp-action="Login">
 
-            <div class="roles">
-                <label>
-                    @* Name değerini 'userType' yapıyoruz (Controller parametresi ile aynı) *@
-                    <input type="radio" name="userType" value="Egitmen" required checked>
-                    Eğitmen
-                </label>
+                <div class="roles">
+                    <label>
+                        <input type="radio" name="userType" value="Egitmen" required checked>
+                        Eğitmen
+                    </label>
 
-                <label>
-                    <input type="radio" name="userType" value="Ogrenci">
-                    Öğrenci
-                </label>
-            </div>
+                    <label>
+                        <input type="radio" name="userType" value="Ogrenci">
+                        Öğrenci
+                    </label>
+                </div>
 
-            @* Name değerlerini 'Isim' ve 'Sifre' olarak güncelliyoruz *@
-            <input type="text" name="Isim" placeholder="İsim" required>
-            <input type="password" name="Sifre" placeholder="Şifre" required>
+                <input type="text" name="username" placeholder="Kullanıcı Adı" required>
 
-            <button type="submit">Giriş Yap</button>
-        </form>
+                <input type="password" name="password" placeholder="Şifre" required>
 
-        @if (TempData["Error"] != null)
-        {
-            <p style="color:red; font-size:13px; margin-top:10px;">@TempData["Error"]</p>
-        }
+                <button type="submit">Giriş Yap</button>
+            </form>
+
+            @if (ViewBag.Error != null)
+            {
+                <p style="color:red; font-size:13px; margin-top:10px;">
+                    @ViewBag.Error
+                </p>
+            }
+        </div>
     </div>
 
 </body>

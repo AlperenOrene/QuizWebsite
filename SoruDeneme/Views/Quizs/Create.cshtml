@@ -1,38 +1,47 @@
 ﻿@model SoruDeneme.Models.Quiz
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Yeni Sınav Oluştur";
 }
 
-<h1>Create</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
 
-<h4>Quiz</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="QuizName" class="control-label"></label>
-                <input asp-for="QuizName" class="form-control" />
-                <span asp-validation-for="QuizName" class="text-danger"></span>
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">Yeni Sınav Oluştur</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="QuizName" class="control-label fw-bold">Sınav Adı</label>
+                            <input asp-for="QuizName" class="form-control" placeholder="Örn: Matematik Vize 1" />
+                            <span asp-validation-for="QuizName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label asp-for="Genre" class="control-label fw-bold">Tür / Kategori</label>
+                            <input asp-for="Genre" class="form-control" placeholder="Örn: Sayısal, Tarih, Genel Kültür" />
+                            <span asp-validation-for="Genre" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <input type="submit" value="Oluştur" class="btn btn-success btn-lg" />
+                            <a asp-action="Index" class="btn btn-secondary">Listeye Geri Dön</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Genre" class="control-label"></label>
-                <input asp-for="Genre" class="form-control" />
-                <span asp-validation-for="Genre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

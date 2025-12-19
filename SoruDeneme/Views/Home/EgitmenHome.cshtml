@@ -2,9 +2,56 @@
     ViewData["Title"] = "Eğitmen Paneli";
 }
 
-<div class="container mt-5">
-    <div class="alert alert-primary">
-        <h2>Hoş Geldiniz, Sayın Eğitmen</h2>
-        <p>Buradan sınavlarınızı yönetebilir ve sonuçları görebilirsiniz.</p>
+<style>
+    .panel-scale {
+        transform: scale(1.4); 
+        transform-origin: center top;
+    }
+</style>
+
+<div class="panel-scale">
+    <div class="container mt-5">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <h2 class="text-dark fw-bold">Hoş Geldiniz, Sayın Eğitmen</h2>
+                <p class="lead">Sınav süreçlerini buradan yönetebilirsiniz.</p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12 mb-4">
+                <div class="card h-100 border-primary shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">Sınav Yönetimi</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Yeni sınav oluşturabilir, mevcut sınavları düzenleyebilir veya silebilirsiniz.
+                        </p>
+                        <a asp-controller="Quizs" asp-action="Index" class="btn btn-primary w-100">
+                            Sınav Listesine Git &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4">
+                <div class="card h-100 border-success shadow">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="card-title mb-0">Soru Yönetimi</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Sınavlara eklemek üzere soru havuzunu buradan yönetebilirsiniz.
+                        </p>
+                        <a asp-controller="Questions" asp-action="Index" class="btn btn-success w-100">
+                            Soru Listesine Git &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
