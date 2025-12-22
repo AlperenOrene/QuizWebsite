@@ -61,7 +61,6 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\uploads\4eb556b7e7924c7cafe331448c56637c.png
 wwwroot\uploads\questions\q_d615891ab5514bc5ad617def7cbb68c0.png
 C:\Users\berat\OneDrive\Masaüstü\b\SoruDeneme\wwwroot\css\site.css
 C:\Users\berat\OneDrive\Masaüstü\b\SoruDeneme\wwwroot\favicon.ico
