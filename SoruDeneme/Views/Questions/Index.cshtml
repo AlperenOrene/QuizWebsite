@@ -6,10 +6,19 @@
 
 <style>
     .page-scale {
-        transform: scale(1.5); 
-        transform-origin: top center; 
+        transform: scale(1.5);
+        transform-origin: top center;
         width: 100%;
-        margin-bottom: 150px; 
+        margin-bottom: 150px;
+    }
+
+    .thumb {
+        width: 46px;
+        height: 46px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        object-fit: cover;
+        background: #fff;
     }
 </style>
 
@@ -24,10 +33,11 @@
             </a>
         </div>
 
-        <table class="table table-hover shadow-sm border rounded">
+        <table class="table table-hover shadow-sm border rounded align-middle">
             <thead class="table-light">
                 <tr>
                     <th>No</th>
+                    <th>Resim</th>
                     <th>Soru Metni</th>
                     <th>Doğru Cevap</th>
                     <th>Sınav</th>
@@ -38,25 +48,34 @@
                 @foreach (var item in Model)
                 {
                     <tr>
+                        <td>@item.QuestionNum</td>
+
                         <td>
-                            @Html.DisplayFor(modelItem => item.QuestionNum)
-                        </td>
-                        <td>
-                            @if (item.Text != null && item.Text.Length > 50)
+                            @if (!string.IsNullOrWhiteSpace(item.ImagePath))
                             {
-                                @item.Text.Substring(0, 50) <text>...</text>
+                                <img src="@item.ImagePath" class="thumb" alt="Resim" />
                             }
                             else
                             {
-                                @Html.DisplayFor(modelItem => item.Text)
+                                <span class="text-muted">—</span>
                             }
                         </td>
-                        <td class="fw-bold text-success">
-                            @Html.DisplayFor(modelItem => item.CorrectOption)
-                        </td>
+
                         <td>
-                            @Html.DisplayFor(modelItem => item.Quiz.QuizName)
+                            @if (!string.IsNullOrEmpty(item.Text) && item.Text.Length > 50)
+                            {
+                                @item.Text.Substring(0, 50)<text>...</text>
+                            }
+                            else
+                            {
+                                @item.Text
+                            }
                         </td>
+
+                        <td class="fw-bold text-success">@item.CorrectOption</td>
+
+                        <td>@item.Quiz?.QuizName</td>
+
                         <td class="text-end">
                             <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning text-white">Düzenle</a>
                             <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info text-white">Detaylar</a>

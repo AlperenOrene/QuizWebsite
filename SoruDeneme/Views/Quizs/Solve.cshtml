@@ -2,10 +2,29 @@
 
 <style>
     .page-scale {
-        transform: scale(1.3); 
-        transform-origin: top center; 
+        transform: scale(1.3);
+        transform-origin: top center;
         width: 100%;
-        margin-bottom: 150px; 
+        margin-bottom: 150px;
+    }
+
+    .option-box {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px 12px;
+        margin-bottom: 10px;
+    }
+
+    .question-image {
+        max-width: 100%;
+        max-height: 350px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 6px;
+        background: white;
     }
 </style>
 
@@ -15,34 +34,160 @@
 
         @if (Model.IsFinished)
         {
-            <h3>🎉 Sorular bitmiştir</h3>
+            <h3>🎉 Quiz bitti</h3>
+
+            <div class="alert alert-success mt-3">
+                <strong>Skor:</strong> @Model.CorrectCount / @Model.TotalQuestions
+            </div>
+
+            <div class="d-flex gap-2 mt-2">
+                <a asp-action="Index" class="btn btn-secondary">Sınavlara Dön</a>
+                <a asp-controller="Home" asp-action="OgrenciHome" class="btn btn-outline-primary">Öğrenci Paneli</a>
+            </div>
         }
         else
         {
-            <form asp-action="Solve" method="get">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <p class="text-muted mb-0">
+                    Soru @(Model.Order + 1) / @Model.TotalQuestions
+                </p>
+
+                <a asp-action="Index" class="btn btn-outline-danger btn-sm">
+                    Vazgeç
+                </a>
+            </div>
+
+            <form asp-action="Solve" method="post">
+                @Html.AntiForgeryToken()
+
                 <input type="hidden" name="quizId" value="@Model.QuizId" />
-                <input type="hidden" name="order" value="@(Model.Order + 1)" />
+                <input type="hidden" name="order" value="@Model.Order" />
 
                 <p class="fs-4">
                     <strong>@(Model.Order + 1).</strong>
                     @Model.CurrentQuestion.Text
                 </p>
 
-                <div class="d-grid gap-2 col-md-6">
-                    <button type="submit" name="selected" value="A" class="btn btn-outline-primary text-start">
-                        <strong>A)</strong> @Model.CurrentQuestion.ChoiceA
-                    </button>
+                @* ✅ Soru resmi varsa göster *@
+                @if (Model.CurrentQuestion != null && !string.IsNullOrWhiteSpace(Model.CurrentQuestion.ImagePath))
+                {
+                    <div class="mb-3">
+                        <img src="@Model.CurrentQuestion.ImagePath" class="question-image" alt="Soru Resmi" />
+                    </div>
+                }
 
-                    <button type="submit" name="selected" value="B" class="btn btn-outline-primary text-start">
-                        <strong>B)</strong> @Model.CurrentQuestion.ChoiceB
-                    </button>
+                <div class="col-md-7">
+                    @{
+                        var q = Model.CurrentQuestion;
 
-                    <button type="submit" name="selected" value="C" class="btn btn-outline-primary text-start">
-                        <strong>C)</strong> @Model.CurrentQuestion.ChoiceC
-                    </button>
+                        // Dolu seçenek var mı? (en az 1 tane)
+                        bool anyOption =
+                            !string.IsNullOrWhiteSpace(q?.ChoiceA) ||
+                            !string.IsNullOrWhiteSpace(q?.ChoiceB) ||
+                            !string.IsNullOrWhiteSpace(q?.ChoiceC) ||
+                            !string.IsNullOrWhiteSpace(q?.ChoiceD) ||
+                            !string.IsNullOrWhiteSpace(q?.ChoiceE);
+
+                        // "required" sadece ilk görünen şıkta olsun (HTML için yeterli)
+                        bool requiredSet = false;
+                    }
+
+                    @if (!anyOption)
+                    {
+                        <div class="alert alert-warning">
+                            Bu sorunun şıkları boş görünüyor. (ChoiceA/ChoiceB/... alanlarını kontrol et)
+                        </div>
+                    }
+                    else
+                    {
+                        @* A *@
+                        @if (!string.IsNullOrWhiteSpace(q.ChoiceA))
+                        {
+                            <div class="option-box">
+                                <label style="cursor:pointer; width:100%;">
+                                    <input type="radio" name="selected" value="A"
+                                           @(!requiredSet ? "required" : "")
+                                           @(Model.SelectedOption == "A" ? "checked" : "") />
+                                    <strong>A)</strong> @q.ChoiceA
+                                </label>
+                            </div>
+                            requiredSet = true;
+                        }
+
+                        @* B *@
+                        @if (!string.IsNullOrWhiteSpace(q.ChoiceB))
+                        {
+                            <div class="option-box">
+                                <label style="cursor:pointer; width:100%;">
+                                    <input type="radio" name="selected" value="B"
+                                           @(!requiredSet ? "required" : "")
+                                           @(Model.SelectedOption == "B" ? "checked" : "") />
+                                    <strong>B)</strong> @q.ChoiceB
+                                </label>
+                            </div>
+                            requiredSet = true;
+                        }
+
+                        @* C *@
+                        @if (!string.IsNullOrWhiteSpace(q.ChoiceC))
+                        {
+                            <div class="option-box">
+                                <label style="cursor:pointer; width:100%;">
+                                    <input type="radio" name="selected" value="C"
+                                           @(!requiredSet ? "required" : "")
+                                           @(Model.SelectedOption == "C" ? "checked" : "") />
+                                    <strong>C)</strong> @q.ChoiceC
+                                </label>
+                            </div>
+                            requiredSet = true;
+                        }
+
+                        @* D *@
+                        @if (!string.IsNullOrWhiteSpace(q.ChoiceD))
+                        {
+                            <div class="option-box">
+                                <label style="cursor:pointer; width:100%;">
+                                    <input type="radio" name="selected" value="D"
+                                           @(!requiredSet ? "required" : "")
+                                           @(Model.SelectedOption == "D" ? "checked" : "") />
+                                    <strong>D)</strong> @q.ChoiceD
+                                </label>
+                            </div>
+                            requiredSet = true;
+                        }
+
+                        @* E *@
+                        @if (!string.IsNullOrWhiteSpace(q.ChoiceE))
+                        {
+                            <div class="option-box">
+                                <label style="cursor:pointer; width:100%;">
+                                    <input type="radio" name="selected" value="E"
+                                           @(!requiredSet ? "required" : "")
+                                           @(Model.SelectedOption == "E" ? "checked" : "") />
+                                    <strong>E)</strong> @q.ChoiceE
+                                </label>
+                            </div>
+                            requiredSet = true;
+                        }
+                    }
+
+                    <div class="d-flex gap-2 mt-2">
+                        @if (Model.Order > 0)
+                        {
+                            <a class="btn btn-outline-secondary"
+                               asp-action="Solve"
+                               asp-route-quizId="@Model.QuizId"
+                               asp-route-order="@(Model.Order - 1)">
+                                Geri
+                            </a>
+                        }
+
+                        <button type="submit" class="btn btn-primary ms-auto" @(anyOption ? "" : "disabled")>
+                            Sonraki
+                        </button>
+                    </div>
                 </div>
             </form>
         }
-
     </div>
 </div>

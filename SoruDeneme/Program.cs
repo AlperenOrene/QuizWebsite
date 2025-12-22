@@ -1,27 +1,54 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using SoruDeneme.Data;
+using SoruDeneme.Models;
+using System.Security.Cryptography;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Veritabanı bağlantısı
 builder.Services.AddDbContext<SoruDenemeContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SoruDenemeContext") ?? throw new InvalidOperationException("Connection string 'SoruDenemeContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SoruDenemeContext")
+        ?? throw new InvalidOperationException("Connection string 'SoruDenemeContext' not found.")));
 
-// Controller ve View servisleri
 builder.Services.AddControllersWithViews();
 
-// --- 1. SESSION SERVİSİNİ EKLEME (Ayarlı Halde) ---
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(60); // 60 dk işlem yapmazsa oturum düşer
+    options.IdleTimeout = TimeSpan.FromMinutes(60);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
 
 var app = builder.Build();
 
-// Hata yönetimi ve HSTS
+// ✅ DB migrate + seed
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<SoruDenemeContext>();
+
+    // Migration kullanıyorsan:
+    db.Database.Migrate();
+
+    // Basit hash
+    static string HashPassword(string password)
+    {
+        using var sha = SHA256.Create();
+        var bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
+        return Convert.ToHexString(bytes);
+    }
+
+    // Seed Users
+    if (!db.Users.Any())
+    {
+        db.Users.AddRange(
+            new AppUser { Username = "eğitmen", PasswordHash = HashPassword("eğitmen123"), Role = "Egitmen" },
+            new AppUser { Username = "öğrenci", PasswordHash = HashPassword("öğrenci123"), Role = "Ogrenci" }
+        );
+
+        db.SaveChanges();
+    }
+}
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -29,18 +56,16 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+
 app.UseRouting();
 
-// --- 2. SESSION MİDDLEWARE (UseRouting'den SONRA olmalı) ---
 app.UseSession();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();

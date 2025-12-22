@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SoruDeneme.Models;
+using SoruDeneme.Filters;
 
 namespace SoruDeneme.Controllers
 {
@@ -8,36 +9,16 @@ namespace SoruDeneme.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Login");
         }
 
-        [HttpPost]
-        public IActionResult Index(string userType, string Isim, string Sifre)
-        {
-            if (Isim == "eðitmen" && Sifre == "eðitmen123")
-            {
-                if (userType == "Egitmen")
-                {
-                    return RedirectToAction("EgitmenHome");
-                }
-            }
-            if (Isim == "öðrenci" && Sifre == "öðrenci123") 
-            {
-                if (userType == "Ogrenci")
-                {
-                    return RedirectToAction("OgrenciHome");
-                }
-            }
-
-            ViewBag.ErrorMessage = "Kullanýcý adý veya þifre hatalý!";
-            return View();
-        }
-
+        [RequireRole("Egitmen")]
         public IActionResult EgitmenHome()
         {
             return View();
         }
 
+        [RequireRole("Ogrenci")]
         public IActionResult OgrenciHome()
         {
             return View();

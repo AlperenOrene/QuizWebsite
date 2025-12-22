@@ -1,10 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http; 
+using Microsoft.EntityFrameworkCore;
+using SoruDeneme.Data;
+using SoruDeneme.Models;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace SoruDeneme.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly SoruDenemeContext _context;
+
+        public LoginController(SoruDenemeContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -15,33 +26,43 @@ namespace SoruDeneme.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Login(string userType, string username, string password)
+        // Basit SHA256 hash (ödev seviyesi için yeterli; istersen sonra BCrypt/Identity yaparız)
+        private static string HashPassword(string password)
         {
-            if (userType == "Egitmen" && username == "eğitmen" && password == "eğitmen123")
+            using var sha = SHA256.Create();
+            var bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
+            return Convert.ToHexString(bytes);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(string userType, string username, string password)
+        {
+            var passHash = HashPassword(password);
+
+            // Kullanıcı adı + şifre + rol eşleşmeli
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Username == username && u.PasswordHash == passHash && u.Role == userType);
+
+            if (user == null)
             {
-                HttpContext.Session.SetString("UserRole", "Egitmen");
-
-                return RedirectToAction("EgitmenHome", "Home");
-            }
-
-            else if (userType == "Ogrenci" && username == "öğrenci" && password == "öğrenci123")
-            {
-                HttpContext.Session.SetString("UserRole", "Ogrenci");
-
-                return RedirectToAction("OgrenciHome", "Home");
-            }
-
-            else
-            {
-                ViewBag.Error = "Seçiminizle girdiğiniz bilgiler uyuşmuyor veya hatalı!";
+                ViewBag.Error = "Kullanıcı adı / şifre / rol hatalı!";
                 return View("Index");
             }
+
+            HttpContext.Session.SetInt32("UserId", user.Id);
+            HttpContext.Session.SetString("UserRole", user.Role);
+            HttpContext.Session.SetString("Username", user.Username);
+
+            if (user.Role == "Egitmen")
+                return RedirectToAction("EgitmenHome", "Home");
+
+            return RedirectToAction("OgrenciHome", "Home");
         }
 
         public IActionResult Logout()
         {
-            HttpContext.Session.Clear(); 
+            HttpContext.Session.Clear();
             return RedirectToAction("Index");
         }
     }

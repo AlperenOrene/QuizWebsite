@@ -2,18 +2,28 @@
     ViewData["Title"] = "Öğrenci Paneli";
 }
 
-<style>
-    .panel-scale {
-        transform: scale(1.5); 
-        transform-origin: center top;
-    }
-</style>
+<div class="container py-5" style="max-width: 1100px;">
+    <div class="card shadow-sm p-4">
+        <div class="card-body">
+            <h2 class="fw-bold mb-2">Hoş Geldiniz, Sevgili Öğrenci</h2>
 
-<div class="panel-scale">
-    <div class="container mt-5">
-        <div class="alert alert-success">
-            <h2>Hoş Geldiniz, Sevgili Öğrenci</h2>
-            <p>Buradan aktif sınavlarınıza katılabilir ve notlarınızı inceleyebilirsiniz.</p>
+            <p class="text-muted fs-5 mb-4">
+                Buradan sınavlara girip soruları çözebilirsiniz.
+            </p>
+
+            <div class="d-flex gap-3">
+                <a asp-controller="Quizs"
+                   asp-action="Index"
+                   class="btn btn-success btn-lg">
+                    Sınavlara Git
+                </a>
+
+                <a asp-controller="Login"
+                   asp-action="Logout"
+                   class="btn btn-outline-danger btn-lg">
+                    Çıkış Yap
+                </a>
+            </div>
         </div>
     </div>
 </div>
