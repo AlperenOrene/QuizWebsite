@@ -6,10 +6,8 @@
 
         public string Username { get; set; } = "";
 
-        // Basit yaklaşım: şifreyi hash’li saklayacağız
         public string PasswordHash { get; set; } = "";
 
-        // "Egitmen" / "Ogrenci"
         public string Role { get; set; } = "";
     }
 }

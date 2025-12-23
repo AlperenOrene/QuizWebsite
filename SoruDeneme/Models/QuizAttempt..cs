@@ -14,8 +14,7 @@ namespace SoruDeneme.Models
         public AppUser? User { get; set; }
 
         public DateTime StartedAt { get; set; }
-        public DateTime? FinishedAt { get; set; } // bitince dolacak
-
+        public DateTime? FinishedAt { get; set; }
         public int TotalQuestions { get; set; }
         public int CorrectCount { get; set; }
 

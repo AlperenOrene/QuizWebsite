@@ -1,0 +1,12 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build outputs
+**/bin/
+**/obj/
+
+# SQLite temp files (bunlar git'e gitmesin)
+**/*.db-shm
+**/*.db-wal

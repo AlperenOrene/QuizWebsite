@@ -19,6 +19,8 @@
             <tr>
                 <th>Öðrenci</th>
                 <th>Doðru</th>
+                <th>Yanlýþ</th>
+                <th>Boþ</th>
                 <th>Toplam</th>
                 <th>Bittiði Zaman</th>
             </tr>
@@ -26,9 +28,18 @@
         <tbody>
             @foreach (var a in Model)
             {
+                var answered = (a.Answers == null)
+                    ? 0
+                    : a.Answers.Select(x => x.QuestionId).Distinct().Count();
+
+                var blank = a.TotalQuestions - answered;
+                var wrong = answered - a.CorrectCount;
+
                 <tr>
                     <td>@(a.User?.Username ?? "Bilinmiyor")</td>
                     <td>@a.CorrectCount</td>
+                    <td>@wrong</td>
+                    <td>@blank</td>
                     <td>@a.TotalQuestions</td>
                     <td>@(a.FinishedAt.HasValue ? a.FinishedAt.Value.ToLocalTime().ToString("dd.MM.yyyy HH:mm") : "-")</td>
                 </tr>

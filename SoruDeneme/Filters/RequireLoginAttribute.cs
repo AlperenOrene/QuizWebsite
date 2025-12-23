@@ -7,10 +7,10 @@ namespace SoruDeneme.Filters
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            var role = context.HttpContext.Session.GetString("UserRole");
             var userId = context.HttpContext.Session.GetInt32("UserId");
+            var role = context.HttpContext.Session.GetString("UserRole");
 
-            if (string.IsNullOrEmpty(role) || userId == null)
+            if (userId == null || string.IsNullOrWhiteSpace(role))
             {
                 context.Result = new RedirectToActionResult("Index", "Login", null);
                 return;

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SoruDeneme.Data;
-using SoruDeneme.Models;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -26,7 +25,6 @@ namespace SoruDeneme.Controllers
             return View();
         }
 
-        // Basit SHA256 hash (ödev seviyesi için yeterli; istersen sonra BCrypt/Identity yaparız)
         private static string HashPassword(string password)
         {
             using var sha = SHA256.Create();
@@ -40,7 +38,6 @@ namespace SoruDeneme.Controllers
         {
             var passHash = HashPassword(password);
 
-            // Kullanıcı adı + şifre + rol eşleşmeli
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.Username == username && u.PasswordHash == passHash && u.Role == userType);
 
