@@ -49,7 +49,7 @@ Bilgisayarınızda aşağıdakiler kurulu olmalıdır:
 ### 2️ Projeyi Klonla
 
 ```bash
-git clone https://github.com/beratetikk/QuizApp.git
+git clone https://github.com/AlperenOrene/QuizWebsite.git
 ```
 
 ---
