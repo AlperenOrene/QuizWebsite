@@ -6,7 +6,6 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 var appDataDir = Path.Combine(builder.Environment.ContentRootPath, "App_Data");
 Directory.CreateDirectory(appDataDir);
 
@@ -26,7 +25,6 @@ builder.Services.AddSession(options =>
 });
 
 var app = builder.Build();
-
 
 using (var scope = app.Services.CreateScope())
 {

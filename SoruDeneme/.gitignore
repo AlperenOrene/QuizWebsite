@@ -4,9 +4,12 @@
 *.suo
 
 # Build outputs
-**/bin/
-**/obj/
+bin/
+obj/
 
-# SQLite temp files (bunlar git'e gitmesin)
-**/*.db-shm
-**/*.db-wal
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
