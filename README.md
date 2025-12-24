@@ -1,4 +1,4 @@
-# SoruDeneme - Online Quiz Platformu
+# QuizAPP
 
 Bu proje, eğitmenlerin sınav oluşturabileceği ve öğrencilerin bu sınavları çözebileceği ASP.NET Core tabanlı bir web uygulamasıdır. Veritabanı olarak SQLite kullanılmıştır ve kurulum gerektirmez.
 
