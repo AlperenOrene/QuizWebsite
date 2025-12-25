@@ -62,7 +62,7 @@ git clone https://github.com/AlperenOrene/QuizWebsite.git
 ### 3 Projeyi Aç
 - Visual Studio'yu aç.
 - **Open a project or solution** seç.
--  **`SoruDeneme.sln`** dosyasını aç.
+-  **`SoruDeneme.slnx`** dosyasını aç.
 
 ---
 
