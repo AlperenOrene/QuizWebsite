@@ -7,22 +7,22 @@ Eğitmenlerin quiz oluşturabildiği, öğrencilerin quiz çözebildiği basit v
 
 ##  Proje Ekibi
 
-- **Şevket Berat Tetik 23118080062​
+- **Şevket Berat Tetik**​
 
-- **Alperen Örene 23118080006​
+- **Alperen Örene**​
 
-- **Muhammed Eymen Yiğit 23118080087​
+- **Muhammed Eymen Yiğit** ​
 
-- **Mustafa Kerem Kaya 23118080045​
+- **Mustafa Kerem Kaya**​
 
 ---
 
 ## Giriş Bilgileri
-##Eğitmen Giriş##
+**Eğitmen Giriş**
 Kullanıcı adı = egitmen 
 şifre =egitmen123
 
-##Öğrenci Giriş##
+**Öğrenci Giriş**
 Kullanıcı adı = ogrenci 
 şifre= ogrenci123
 
