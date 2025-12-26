@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\quizs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\home\\ogrencihome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\home\\ogrencihome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\home\\egitmenhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -17,14 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\kerem\\source\\repos\\quizwebsite\\sorudeneme\\views\\quizs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Create.cshtml",
-              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Create.cshtml",
-              "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Create.cshtml",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAH0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-26T18:14:30.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SoruDeneme\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwEMAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-26T18:04:22.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EgitmenHome.cshtml",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
-              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
-              "RelativeToolTip": "SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-26T18:02:37.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Login\\Index.cshtml",
-              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Login\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Login\\Index.cshtml",
-              "RelativeToolTip": "SoruDeneme\\Views\\Login\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-26T18:02:00.257Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-26T18:01:35.389Z",
+              "WhenOpened": "2025-12-26T18:20:38.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Index.cshtml",
-              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Quizs\\Index.cshtml",
-              "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "OgrenciHome.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
+              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
+              "RelativeToolTip": "SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwAkAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-26T17:58:46.955Z",
+              "WhenOpened": "2025-12-26T18:20:36.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EgitmenHome.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
+              "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\QuizWebsite\\SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
+              "RelativeToolTip": "SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-26T18:02:37.348Z",
               "EditorCaption": ""
             }
           ]
