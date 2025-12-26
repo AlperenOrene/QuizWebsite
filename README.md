@@ -51,7 +51,18 @@ Bilgisayarınızda aşağıdakiler kurulu olmalıdır:
 
 ---
 
-### 2️ Projeyi Klonla
+---
+
+## 2 Çalıştırma
+- Visual Studio'yu açın.
+- **Depoyu klonla** seçeneğine basın.
+- https://github.com/AlperenOrene/QuizWebsite linki ile depoyu klonlayın.
+- Visual studio run (f5) ile çalışırtır.
+
+---
+
+### 1 Alternatif Çalıştırma 
+## 1Depoyu Klonla
 
 ```bash
 git clone https://github.com/AlperenOrene/QuizWebsite.git
@@ -59,16 +70,16 @@ git clone https://github.com/AlperenOrene/QuizWebsite.git
 
 ---
 
-### 3 Projeyi Aç
+## 2 Projeyi Aç
 - Visual Studio'yu aç.
 - **Open a project or solution** seç.
 -  **`SoruDeneme.slnx`** dosyasını aç.
 
 ---
 
-### 4 Uygulamayı Çalıştır
-- Visual studio run (f5) ile çalılır.
-- Site otomatik açılır. (Açılamzsa 'http://localhost:5000' konsolda çıkan bu linkle açılabilir.)
+## 3 Uygulamayı Çalıştır
+- Visual studio run (f5) ile çalışır.
+- Site otomatik açılır. (Açılmazsa 'http://localhost:5000' konsolda çıkan bu linkle açılabilir.)
 
 ---
 
