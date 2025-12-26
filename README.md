@@ -67,12 +67,12 @@ git clone https://github.com/AlperenOrene/QuizWebsite.git
 ---
 
 ### 4 Uygulamayı Çalıştır
--Visual studio run (f5) ile çalılır.
--Site otomatik açılır. (Açılamzsa 'http://localhost:5000' konsolda çıkan bu linkle açılabilir.)
+- Visual studio run (f5) ile çalılır.
+- Site otomatik açılır. (Açılamzsa 'http://localhost:5000' konsolda çıkan bu linkle açılabilir.)
 
 ---
 
 ## Önemli Notlar
--Proje eğitim içindir.
--Giriş kısımları basit tutulmuştur.
--SQLite tercih eidlerek proje kolay çalışır haldedir
+- Proje eğitim içindir.
+- Giriş kısımları test sürümü olduğu için basit tutulmuştur.
+- SQLite tercih edilerek proje kolay çalışır haldedir.
