@@ -51,7 +51,6 @@ Bilgisayarınızda aşağıdakiler kurulu olmalıdır:
 
 ---
 
----
 
 ## 2 Çalıştırma
 - Visual Studio'yu açın.
@@ -62,20 +61,18 @@ Bilgisayarınızda aşağıdakiler kurulu olmalıdır:
 ---
 
 ### 1 Alternatif Çalıştırma 
-## 1Depoyu Klonla
+## 1 Depoyu Klonla
 
 ```bash
 git clone https://github.com/AlperenOrene/QuizWebsite.git
 ```
-
----
 
 ## 2 Projeyi Aç
 - Visual Studio'yu aç.
 - **Open a project or solution** seç.
 -  **`SoruDeneme.slnx`** dosyasını aç.
 
----
+
 
 ## 3 Uygulamayı Çalıştır
 - Visual studio run (f5) ile çalışır.
