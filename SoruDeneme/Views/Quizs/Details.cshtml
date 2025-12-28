@@ -5,57 +5,92 @@
 }
 
 <style>
-    .page-scale {
-        transform: scale(1.3); 
-        transform-origin: top center; 
-        width: 100%;
-        margin-bottom: 150px; 
+    .details-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+        padding: 60px 0;
+    }
+
+    .detail-card {
+        border-radius: 16px;
+        border: none;
+    }
+
+    .detail-title {
+        font-weight: 700;
+        letter-spacing: .5px;
+    }
+
+    .detail-dt {
+        color: #6c757d;
+        font-weight: 600;
+    }
+
+    .detail-dd {
+        font-size: 1.05rem;
+        word-break: break-word;
+    }
+
+    .badge-category {
+        font-size: .85rem;
+        padding: 6px 14px;
+        border-radius: 999px;
     }
 </style>
 
-<div class="page-scale">
-
-    <div class="container mt-5">
+<div class="details-page">
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-8 col-lg-7">
 
-                <div class="card shadow border-info">
-                    <div class="card-header bg-info text-white">
-                        <h3 class="card-title mb-0">Sınav Detayları</h3>
+                <div class="card shadow detail-card">
+                    <div class="card-header bg-info text-white rounded-top">
+                        <h3 class="detail-title mb-0">
+                            📄 Sınav Detayları
+                        </h3>
                     </div>
-                    <div class="card-body">
-                        <dl class="row fs-5">
-                            <dt class="col-sm-4 text-muted">
-                                Sınav Adı:
+
+                    <div class="card-body px-4 py-4">
+                        <dl class="row mb-0 align-items-center">
+
+                            <dt class="col-sm-4 detail-dt">
+                                Sınav Adı
                             </dt>
-                            <dd class="col-sm-8 fw-bold">
-                                @Html.DisplayFor(model => model.QuizName)
+                            <dd class="col-sm-8 detail-dd fw-bold">
+                                @Model.QuizName
                             </dd>
 
-                            <hr class="my-2" />
+                            <hr class="my-3" />
 
-                            <dt class="col-sm-4 text-muted">
-                                Tür / Kategori:
+                            <dt class="col-sm-4 detail-dt">
+                                Tür / Kategori
                             </dt>
-                            <dd class="col-sm-8">
-                                <span class="badge bg-secondary">@Html.DisplayFor(model => model.Genre)</span>
+                            <dd class="col-sm-8 detail-dd">
+                                <span class="badge bg-secondary badge-category">
+                                    @((Model.Genre ?? "-").Trim())
+                                </span>
                             </dd>
+
                         </dl>
                     </div>
-                    <div class="card-footer bg-white">
+
+                    <div class="card-footer bg-white border-0 rounded-bottom px-4 pb-4">
                         <div class="d-flex justify-content-between">
                             <a asp-action="Index" class="btn btn-outline-secondary">
-                                &larr; Listeye Dön
+                                ← Listeye Dön
                             </a>
-                            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning text-white">
+
+                            <a asp-action="Edit"
+                               asp-route-id="@Model.Id"
+                               class="btn btn-warning text-white">
                                 Düzenle
                             </a>
                         </div>
                     </div>
+
                 </div>
 
             </div>
         </div>
     </div>
-
 </div>

@@ -6,7 +6,8 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>QuizApp - Giriş</title>
+    <title>QuizApp | Giriş</title>
+
     <style>
         body {
             margin: 0;
@@ -14,77 +15,215 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: "Segoe UI", Arial, sans-serif;
         }
 
         .login-container {
-            background-color: white;
-            padding: 30px;
-            width: 320px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            background: rgba(255,255,255,0.95);
+            width: 340px;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
             text-align: center;
+            animation: fadeIn 0.6s ease;
         }
 
-            .login-container input[type="text"], .login-container input[type="password"], .login-container button {
-                width: 100%;
-                box-sizing: border-box;
-                padding: 10px;
-                margin: 8px 0;
-            }
+        h2 {
+            margin-bottom: 6px;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 22px;
+        }
 
         .roles {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
+            gap: 10px;
+            margin-bottom: 18px;
         }
 
-            .roles label {
-                display: flex;
-                align-items: center;
-                gap: 5px;
+        .role-pill {
+            flex: 1;
+            padding: 10px;
+            border-radius: 999px;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: 0.25s;
+            user-select: none;
+        }
+
+            .role-pill input {
+                display: none;
             }
 
-        .login-container button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
+            .role-pill.active {
+                background: #667eea;
+                color: #fff;
+                border-color: #667eea;
+                box-shadow: 0 6px 15px rgba(102,126,234,0.4);
+            }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 11px 12px;
+            margin: 8px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102,126,234,0.25);
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .eye {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
             cursor: pointer;
-            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            button:disabled {
+                opacity: 0.8;
+                cursor: not-allowed;
+            }
+
+        .spinner {
+            width: 18px;
+            height: 18px;
+            border: 3px solid rgba(255,255,255,0.5);
+            border-top: 3px solid #fff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        /* ===== ANİMASYONLAR (Razor uyumlu) ===== */
+
+        @@keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @@keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="login-container">
-        <h2>QuizApp Giriş</h2>
 
-        <form method="post" action="/Home/Index">
+        <h2>QuizApp</h2>
+        <div class="subtitle">Hesabına giriş yap</div>
+
+        <form method="post" action="/Home/Index" onsubmit="startLoading()">
 
             <div class="roles">
-                <label>
-                    <input type="radio" name="userType" value="Egitmen" required checked>
-                    Eğitmen
+                <label class="role-pill active" id="egitmen">
+                    <input type="radio" name="userType" value="Egitmen" checked>
+                    👨‍🏫 Eğitmen
                 </label>
 
-                <label>
+                <label class="role-pill" id="ogrenci">
                     <input type="radio" name="userType" value="Ogrenci">
-                    Öğrenci
+                    🎓 Öğrenci
                 </label>
             </div>
 
             <input type="text" name="Isim" placeholder="İsim" required>
-            <input type="password" name="Sifre" placeholder="Şifre" required>
 
-            <button type="submit">Giriş Yap</button>
+            <div class="password-wrapper">
+                <input id="password" type="password" name="Sifre" placeholder="Şifre" required>
+                <span id="eye" class="eye" onclick="togglePassword()">👁️</span>
+            </div>
+
+            <button id="loginBtn">
+                <span id="btnText">Giriş Yap</span>
+                <span id="spinner" class="spinner" style="display:none;"></span>
+            </button>
         </form>
 
         @if (TempData["Error"] != null)
         {
-            <p style="color:red; font-size:13px; margin-top:10px;">@TempData["Error"]</p>
+            <div class="error">@TempData["Error"]</div>
         }
+
     </div>
+
+    <script>
+        const egitmen = document.getElementById("egitmen");
+        const ogrenci = document.getElementById("ogrenci");
+
+        egitmen.onclick = () => {
+            egitmen.classList.add("active");
+            ogrenci.classList.remove("active");
+        };
+
+        ogrenci.onclick = () => {
+            ogrenci.classList.add("active");
+            egitmen.classList.remove("active");
+        };
+
+        function togglePassword() {
+            const p = document.getElementById("password");
+            const eye = document.getElementById("eye");
+
+            if (p.type === "password") {
+                p.type = "text";
+                eye.textContent = "🙈";
+            } else {
+                p.type = "password";
+                eye.textContent = "👁️";
+            }
+        }
+
+        function startLoading() {
+            document.getElementById("btnText").textContent = "Giriş Yapılıyor...";
+            document.getElementById("spinner").style.display = "inline-block";
+            document.getElementById("loginBtn").disabled = true;
+        }
+    </script>
 
 </body>
 </html>

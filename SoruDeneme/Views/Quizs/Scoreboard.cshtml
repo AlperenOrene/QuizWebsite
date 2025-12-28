@@ -4,48 +4,163 @@
     var quiz = ViewBag.Quiz as SoruDeneme.Models.Quiz;
 }
 
-<div class="container mt-4">
-    <h2>Skor Tablosu</h2>
-
-    @if (quiz != null)
-    {
-        <p class="text-muted">
-            <strong>Quiz:</strong> @quiz.QuizName
-        </p>
+<style>
+    body {
+        background-color: #f4f6f9;
     }
 
-    <table class="table table-striped table-bordered">
-        <thead>
-            <tr>
-                <th>Öðrenci</th>
-                <th>Doðru</th>
-                <th>Yanlýþ</th>
-                <th>Boþ</th>
-                <th>Toplam</th>
-                <th>Bittiði Zaman</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var a in Model)
-            {
-                var answered = (a.Answers == null)
-                    ? 0
-                    : a.Answers.Select(x => x.QuestionId).Distinct().Count();
+    .page-wrap {
+        min-height: 100vh;
+        padding: 50px 0;
+    }
 
-                var blank = a.TotalQuestions - answered;
-                var wrong = answered - a.CorrectCount;
+    .card {
+        border-radius: 12px;
+        border: none;
+    }
 
-                <tr>
-                    <td>@(a.User?.Username ?? "Bilinmiyor")</td>
-                    <td>@a.CorrectCount</td>
-                    <td>@wrong</td>
-                    <td>@blank</td>
-                    <td>@a.TotalQuestions</td>
-                    <td>@(a.FinishedAt.HasValue ? a.FinishedAt.Value.ToLocalTime().ToString("dd.MM.yyyy HH:mm") : "-")</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    .card-header {
+        background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+        color: #fff;
+        border-radius: 12px 12px 0 0;
+    }
 
-    <a asp-action="Index" class="btn btn-secondary">Sýnavlara Dön</a>
+        .card-header h2 {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+    .quiz-subtitle {
+        font-size: 14px;
+        opacity: .9;
+    }
+
+    table {
+        background-color: #ffffff;
+    }
+
+    thead th {
+        background-color: #eef2f7;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        border-bottom: 1px solid #dee2e6;
+        text-align: center;
+    }
+
+    tbody tr {
+        transition: background-color .15s ease-in-out;
+    }
+
+        tbody tr:hover {
+            background-color: #f1f5fb;
+        }
+
+    td {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+        td:first-child {
+            text-align: left;
+            font-weight: 600;
+        }
+
+    .score-correct {
+        color: #198754;
+        font-weight: 700;
+    }
+
+    .score-wrong {
+        color: #dc3545;
+        font-weight: 700;
+    }
+
+    .score-blank {
+        color: #fd7e14;
+        font-weight: 700;
+    }
+
+    .btn-back {
+        border-radius: 8px;
+        padding: 8px 26px;
+        font-weight: 600;
+    }
+</style>
+
+<div class="page-wrap">
+    <div class="container">
+
+        <div class="card shadow-sm">
+
+            <div class="card-header">
+                <h2>Skor Tablosu</h2>
+                @if (quiz != null)
+                {
+                    <div class="quiz-subtitle">
+                        @quiz.QuizName
+                    </div>
+                }
+            </div>
+
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0 align-middle">
+                        <thead>
+                            <tr>
+                                <th>Öðrenci</th>
+                                <th>Doðru</th>
+                                <th>Yanlýþ</th>
+                                <th>Boþ</th>
+                                <th>Toplam</th>
+                                <th>Bitiþ Zamaný</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var a in Model)
+                            {
+                                var total = a.TotalQuestions;
+
+                                var answered = a.Answers == null
+                                ? 0
+                                : a.Answers.Select(x => x.QuestionId).Distinct().Count();
+
+                                if (answered > total) { answered = total; }
+
+                                var correct = a.CorrectCount;
+                                if (correct > answered) { correct = answered; }
+
+                                var wrong = answered - correct;
+                                var blank = total - answered;
+
+                                <tr>
+                                    <td>
+                                        @(a.User?.Username ?? "Bilinmiyor")
+                                    </td>
+                                    <td class="score-correct">@correct</td>
+                                    <td class="score-wrong">@wrong</td>
+                                    <td class="score-blank">@blank</td>
+                                    <td class="fw-bold">@total</td>
+                                    <td>
+                                        @(a.FinishedAt.HasValue
+                                                                            ? a.FinishedAt.Value.ToLocalTime().ToString("dd.MM.yyyy HH:mm")
+                                                                            : "-")
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card-footer bg-white text-end">
+                <a asp-action="Index" class="btn btn-secondary btn-back">
+                    Sýnavlara Dön
+                </a>
+            </div>
+
+        </div>
+
+    </div>
 </div>

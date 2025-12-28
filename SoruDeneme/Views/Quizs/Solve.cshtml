@@ -1,334 +1,236 @@
 ﻿@model SolveQuizViewModel
 
 <style>
-    .option-box {
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 10px 12px;
-        margin-bottom: 10px;
-        background: #fff;
+    body {
+        background: linear-gradient(135deg, #d4efe0, #e3f6ec);
     }
+
+
+
+    .page-card {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.06);
+        padding: 24px;
+    }
+
+    .option-box {
+        border: 1px solid #e4e6eb;
+        border-radius: 12px;
+        padding: 12px 14px;
+        margin-bottom: 12px;
+        background: #fff;
+        transition: all .2s ease;
+    }
+
+        .option-box:hover {
+            border-color: #0d6efd;
+            background: #f8f9ff;
+        }
 
     .question-image {
         max-width: 100%;
         max-height: 380px;
-        width: auto;
-        height: auto;
         object-fit: contain;
-        border: 1px solid #ddd;
-        border-radius: 12px;
+        border-radius: 14px;
+        border: 1px solid #e4e6eb;
         padding: 6px;
-        background: white;
-        display: block;
+        background: #fff;
     }
 
     .wrap-anywhere {
         overflow-wrap: anywhere;
         word-break: break-word;
-        white-space: normal;
     }
 
     .review-card {
-        border: 1px solid #eee;
-        border-radius: 14px;
-        padding: 14px;
         background: #fff;
-        margin-bottom: 14px;
+        border-radius: 16px;
+        border: 1px solid #e4e6eb;
+        padding: 18px;
+        margin-bottom: 18px;
+        box-shadow: 0 6px 18px rgba(0,0,0,.05);
     }
 
     .chip {
-        display: inline-block;
-        padding: 3px 10px;
+        padding: 4px 12px;
         border-radius: 999px;
         font-size: 12px;
-        border: 1px solid #ddd;
-        white-space: nowrap;
+        background: #f1f3f5;
+        border: 1px solid #dee2e6;
+    }
+
+    .stat-card {
+        border-radius: 14px;
+        padding: 16px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .stat-success {
+        background: linear-gradient(135deg,#28a745,#5dd39e);
+    }
+
+    .stat-danger {
+        background: linear-gradient(135deg,#dc3545,#ff7a7a);
+    }
+
+    .stat-secondary {
+        background: linear-gradient(135deg,#6c757d,#adb5bd);
+    }
+
+    .stat-primary {
+        background: linear-gradient(135deg,#0d6efd,#6ea8fe);
     }
 </style>
 
-<div class="container mt-4">
+<div class="container mt-4 mb-5">
+    <div class="page-card">
 
-    @if (Model.IsFinished)
-    {
-        var wrong = (Model.TotalQuestions - Model.CorrectCount - Model.BlankCount);
-
-        <h3 class="mb-3">Quiz Tamamlandı</h3>
-
-        <div class="row g-3">
-            <div class="col-md-4">
-                <div class="alert alert-success mb-0">
-                    <strong>Doğru:</strong> @Model.CorrectCount
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="alert alert-danger mb-0">
-                    <strong>Yanlış:</strong> @wrong
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="alert alert-secondary mb-0">
-                    <strong>Boş:</strong> @Model.BlankCount
-                </div>
-            </div>
-        </div>
-
-        <div class="alert alert-primary mt-3">
-            <strong>Toplam:</strong> @Model.TotalQuestions
-        </div>
-
-        <div class="d-flex flex-wrap gap-2 mt-2">
-            <a asp-action="Index" class="btn btn-secondary">Sınavlara Dön</a>
-            <a asp-controller="Home" asp-action="OgrenciHome" class="btn btn-outline-primary">Öğrenci Paneli</a>
-        </div>
-
-        @* Review *@
-        @if (Model.ReviewMode && Model.ReviewItems != null && Model.ReviewItems.Any())
+        @if (Model.IsFinished)
         {
-            <hr class="my-4" />
-            <h4 class="mb-3">Soruları İncele</h4>
+            var wrong = Model.TotalQuestions - Model.CorrectCount - Model.BlankCount;
 
-            @foreach (var item in Model.ReviewItems.OrderBy(x => x.QuestionNum))
-            {
-                bool isBlank = string.IsNullOrWhiteSpace(item.SelectedOption);
-                bool isCorrect = (!isBlank && item.SelectedOption == item.CorrectOption);
+            <h3 class="mb-4 fw-bold">Quiz Sonuçları</h3>
 
-                <div class="review-card">
-                    <div class="d-flex justify-content-between align-items-start gap-2">
-                        <div class="fw-bold wrap-anywhere">
-                            @item.QuestionNum) @item.Text
-                        </div>
-                        <div class="ms-2">
-                            @if (isBlank) { <span class="chip">Boş</span> }
-                            else if (isCorrect) { <span class="chip">Doğru</span> }
-                            else { <span class="chip">Yanlış</span> }
-                        </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-3">
+                    <div class="stat-card stat-success">
+                        <div class="fs-4 fw-bold">@Model.CorrectCount</div>
+                        <div>Doğru</div>
                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card stat-danger">
+                        <div class="fs-4 fw-bold">@wrong</div>
+                        <div>Yanlış</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card stat-secondary">
+                        <div class="fs-4 fw-bold">@Model.BlankCount</div>
+                        <div>Boş</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card stat-primary">
+                        <div class="fs-4 fw-bold">@Model.TotalQuestions</div>
+                        <div>Toplam</div>
+                    </div>
+                </div>
+            </div>
 
-                    @if (!string.IsNullOrWhiteSpace(item.ImagePath))
-                    {
-                        <div class="mt-2">
-                            <img src="@item.ImagePath" class="question-image" alt="Soru Resmi" />
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <a asp-action="Index" class="btn btn-outline-secondary">Sınavlara Dön</a>
+                <a asp-controller="Home" asp-action="OgrenciHome" class="btn btn-outline-primary">Öğrenci Paneli</a>
+            </div>
+
+            @if (Model.ReviewMode && Model.ReviewItems.Any())
+            {
+                <h4 class="fw-bold mb-3">Soru İnceleme</h4>
+
+                @foreach (var item in Model.ReviewItems.OrderBy(x => x.QuestionNum))
+                {
+                    bool isBlank = string.IsNullOrWhiteSpace(item.SelectedOption);
+                    bool isCorrect = !isBlank && item.SelectedOption == item.CorrectOption;
+
+                    <div class="review-card">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div class="fw-semibold wrap-anywhere">
+                                @item.QuestionNum) @item.Text
+                            </div>
+                            <span class="chip">
+                                @(isBlank ? "Boş" : isCorrect ? "Doğru" : "Yanlış")
+                            </span>
                         </div>
-                    }
 
-                    <div class="mt-3">
+                        @if (!string.IsNullOrWhiteSpace(item.ImagePath))
+                        {
+                            <img src="@item.ImagePath" class="question-image mb-3" />
+                        }
+
                         <div class="small text-muted mb-2">
-                            <strong>Doğru Şık:</strong> @item.CorrectOption
-                            &nbsp; | &nbsp;
-                            <strong>Senin Seçimin:</strong> @(isBlank ? "-" : item.SelectedOption)
+                            Doğru: <strong>@item.CorrectOption</strong> |
+                            Seçimin: <strong>@(isBlank ? "-" : item.SelectedOption)</strong>
                         </div>
 
                         @{
-                            var opts = new List<(string Key, string? Text)>
-                            {
-                                ("A", item.ChoiceA),
-                                ("B", item.ChoiceB),
-                                ("C", item.ChoiceC),
-                                ("D", item.ChoiceD),
-                                ("E", item.ChoiceE)
-                            };
+                            var opts = new Dictionary<string, string?>
+                        {
+                        {"A",item.ChoiceA},{"B",item.ChoiceB},{"C",item.ChoiceC},
+                        {"D",item.ChoiceD},{"E",item.ChoiceE}
+                        };
                         }
 
                         @foreach (var o in opts)
                         {
-                            if (!string.IsNullOrWhiteSpace(o.Text))
+                            if (!string.IsNullOrWhiteSpace(o.Value))
                             {
-                                var isThisCorrect = (o.Key == item.CorrectOption);
-                                var isThisSelected = (!isBlank && o.Key == item.SelectedOption);
-
                                 <div class="option-box">
-                                    <div class="d-flex justify-content-between gap-2">
-                                        <div class="wrap-anywhere">
-                                            <strong>@o.Key)</strong> @o.Text
-                                        </div>
-                                        <div class="d-flex gap-1 flex-wrap">
-                                            @if (isThisCorrect) { <span class="chip">Doğru</span> }
-                                            @if (isThisSelected) { <span class="chip">Seçtin</span> }
-                                        </div>
-                                    </div>
+                                    <strong>@o.Key)</strong> @o.Value
                                 </div>
                             }
                         }
                     </div>
-                </div>
+                }
             }
         }
-    }
-    else
-    {
-
-        @if (TempData["SolveError"] != null)
+        else
         {
-            <div class="alert alert-danger">@TempData["SolveError"]</div>
-        }
-
-        @if (Model.TimeLimitMinutes.HasValue && Model.TimeLimitMinutes.Value > 0)
-        {
-            <div class="alert alert-warning d-flex justify-content-between align-items-center flex-wrap gap-2">
-                <div><strong>Süre:</strong> <span id="timerText"></span></div>
-                <div class="text-muted small">Süre biterse sınav otomatik biter.</div>
+            <div class="d-flex justify-content-between mb-3">
+                <span class="text-muted">Soru @(Model.Order + 1) / @Model.TotalQuestions</span>
+                <a asp-action="Index" class="btn btn-outline-danger btn-sm">Vazgeç</a>
             </div>
 
-            <script>
-                (function () {
-                    let remaining = @Model.RemainingSeconds;
+            <form asp-action="Solve" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="quizId" value="@Model.QuizId" />
+                <input type="hidden" name="order" value="@Model.Order" />
 
-                    function fmt(sec) {
-                        const m = Math.floor(sec / 60);
-                        const s = sec % 60;
-                        return `${m}:${String(s).padStart(2, '0')}`;
-                    }
-
-                    function tick() {
-                        const el = document.getElementById("timerText");
-                        if (el) el.textContent = fmt(Math.max(0, remaining));
-
-                        if (remaining <= 0) {
-                            location.reload();
-                            return;
-                        }
-                        remaining--;
-                        setTimeout(tick, 1000);
-                    }
-                    tick();
-                })();
-            </script>
-        }
-
-        <div class="d-flex justify-content-between align-items-center mb-2">
-            <p class="text-muted mb-0">
-                Soru @(Model.Order + 1) / @Model.TotalQuestions
-            </p>
-
-            <a asp-action="Index" class="btn btn-outline-danger btn-sm">
-                Vazgeç
-            </a>
-        </div>
-
-        <form asp-action="Solve" method="post">
-            @Html.AntiForgeryToken()
-
-            <input type="hidden" name="quizId" value="@Model.QuizId" />
-            <input type="hidden" name="order" value="@Model.Order" />
-
-            <div class="fs-4 wrap-anywhere">
-                <strong>@(Model.Order + 1).</strong>
-                @Model.CurrentQuestion.Text
-            </div>
-
-            @if (Model.CurrentQuestion != null && !string.IsNullOrWhiteSpace(Model.CurrentQuestion.ImagePath))
-            {
-                <div class="mb-3 mt-2">
-                    <img src="@Model.CurrentQuestion.ImagePath" class="question-image" alt="Soru Resmi" />
+                <div class="fs-5 fw-semibold wrap-anywhere mb-3">
+                    @(Model.Order + 1). @Model.CurrentQuestion.Text
                 </div>
-            }
 
-            <div class="row">
-                <div class="col-lg-8 col-md-10">
-                    @{
-                        var q = Model.CurrentQuestion;
+                @if (!string.IsNullOrWhiteSpace(Model.CurrentQuestion.ImagePath))
+                {
+                    <img src="@Model.CurrentQuestion.ImagePath" class="question-image mb-3" />
+                }
 
-                        bool anyOption =
-                            !string.IsNullOrWhiteSpace(q?.ChoiceA) ||
-                            !string.IsNullOrWhiteSpace(q?.ChoiceB) ||
-                            !string.IsNullOrWhiteSpace(q?.ChoiceC) ||
-                            !string.IsNullOrWhiteSpace(q?.ChoiceD) ||
-                            !string.IsNullOrWhiteSpace(q?.ChoiceE);
+                @{
+                    var q = Model.CurrentQuestion;
+                    var choices = new Dictionary<string, string?>
+                        {
+                        {"A",q.ChoiceA},{"B",q.ChoiceB},{"C",q.ChoiceC},
+                        {"D",q.ChoiceD},{"E",q.ChoiceE}
+                        };
+                }
 
-                        bool requiredSet = false;
-                    }
-
-                    @if (!anyOption)
+                @foreach (var c in choices)
+                {
+                    if (!string.IsNullOrWhiteSpace(c.Value))
                     {
-                        <div class="alert alert-warning">
-                            Bu sorunun şıkları boş görünüyor. (ChoiceA/ChoiceB/... alanlarını kontrol et)
+                        <div class="option-box">
+                            <label class="w-100 wrap-anywhere">
+                                <input type="radio" name="selected" value="@c.Key"
+                                       @(Model.SelectedOption == c.Key ? "checked" : "") required />
+                                <strong>@c.Key)</strong> @c.Value
+                            </label>
                         </div>
                     }
-                    else
+                }
+
+                <div class="d-flex mt-3">
+                    @if (Model.Order > 0)
                     {
-                        if (!string.IsNullOrWhiteSpace(q.ChoiceA))
-                        {
-                            <div class="option-box">
-                                <label class="wrap-anywhere" style="cursor:pointer; width:100%;">
-                                    <input type="radio" name="selected" value="A"
-                                           @(!requiredSet ? "required" : "")
-                                           @(Model.SelectedOption == "A" ? "checked" : "") />
-                                    <strong>A)</strong> @q.ChoiceA
-                                </label>
-                            </div>
-                            requiredSet = true;
-                        }
-
-                        if (!string.IsNullOrWhiteSpace(q.ChoiceB))
-                        {
-                            <div class="option-box">
-                                <label class="wrap-anywhere" style="cursor:pointer; width:100%;">
-                                    <input type="radio" name="selected" value="B"
-                                           @(!requiredSet ? "required" : "")
-                                           @(Model.SelectedOption == "B" ? "checked" : "") />
-                                    <strong>B)</strong> @q.ChoiceB
-                                </label>
-                            </div>
-                            requiredSet = true;
-                        }
-
-                        if (!string.IsNullOrWhiteSpace(q.ChoiceC))
-                        {
-                            <div class="option-box">
-                                <label class="wrap-anywhere" style="cursor:pointer; width:100%;">
-                                    <input type="radio" name="selected" value="C"
-                                           @(!requiredSet ? "required" : "")
-                                           @(Model.SelectedOption == "C" ? "checked" : "") />
-                                    <strong>C)</strong> @q.ChoiceC
-                                </label>
-                            </div>
-                            requiredSet = true;
-                        }
-
-                        if (!string.IsNullOrWhiteSpace(q.ChoiceD))
-                        {
-                            <div class="option-box">
-                                <label class="wrap-anywhere" style="cursor:pointer; width:100%;">
-                                    <input type="radio" name="selected" value="D"
-                                           @(!requiredSet ? "required" : "")
-                                           @(Model.SelectedOption == "D" ? "checked" : "") />
-                                    <strong>D)</strong> @q.ChoiceD
-                                </label>
-                            </div>
-                            requiredSet = true;
-                        }
-
-                        if (!string.IsNullOrWhiteSpace(q.ChoiceE))
-                        {
-                            <div class="option-box">
-                                <label class="wrap-anywhere" style="cursor:pointer; width:100%;">
-                                    <input type="radio" name="selected" value="E"
-                                           @(!requiredSet ? "required" : "")
-                                           @(Model.SelectedOption == "E" ? "checked" : "") />
-                                    <strong>E)</strong> @q.ChoiceE
-                                </label>
-                            </div>
-                            requiredSet = true;
-                        }
+                        <a class="btn btn-outline-secondary"
+                           asp-action="Solve"
+                           asp-route-quizId="@Model.QuizId"
+                           asp-route-order="@(Model.Order - 1)">Geri</a>
                     }
 
-                    <div class="d-flex gap-2 mt-2">
-                        @if (Model.Order > 0)
-                        {
-                            <a class="btn btn-outline-secondary"
-                               asp-action="Solve"
-                               asp-route-quizId="@Model.QuizId"
-                               asp-route-order="@(Model.Order - 1)">
-                                Geri
-                            </a>
-                        }
-
-                        <button type="submit" class="btn btn-primary ms-auto" @(anyOption ? "" : "disabled")>
-                            Sonraki
-                        </button>
-                    </div>
+                    <button type="submit" class="btn btn-primary ms-auto">Sonraki</button>
                 </div>
-            </div>
-        </form>
-    }
+            </form>
+        }
+    </div>
 </div>

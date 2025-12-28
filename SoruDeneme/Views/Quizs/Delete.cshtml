@@ -5,44 +5,84 @@
 }
 
 <style>
-    .page-scale {
-        transform: scale(1.3);
-        transform-origin: top center;
-        width: 100%;
-        margin-bottom: 150px;
+    body {
+        background: #f5f7fa;
     }
+
+    .delete-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f8d7da, #f1aeb5);
+        padding: 60px 15px;
+    }
+
+    .danger-card {
+        border-left: 6px solid #dc3545;
+        border-radius: 14px;
+    }
+
+    .warning-icon {
+        font-size: 64px;
+        color: #dc3545;
+    }
+
+    .quiz-info {
+        background: #fff;
+        border-radius: 10px;
+    }
+
+        .quiz-info dt {
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .quiz-info dd {
+            margin-bottom: 0;
+        }
 </style>
 
-<div class="page-scale">
-    <div class="container mt-5">
+<div class="delete-page">
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-7 col-lg-6">
 
-                <div class="card shadow border-danger">
-                    <div class="card-header bg-danger text-white">
-                        <h3 class="card-title mb-0">Silmek İstediğinize Emin misiniz?</h3>
-                    </div>
+                <div class="card shadow-lg danger-card">
+                    <div class="card-body text-center p-4">
 
-                    <div class="card-body">
-                        <p class="lead text-center text-danger mb-4">
-                            Aşağıdaki sınav kalıcı olarak silinecektir!
+                        <div class="warning-icon mb-3">⚠️</div>
+
+                        <h3 class="fw-bold text-danger mb-2">
+                            Sınav Silinecek
+                        </h3>
+
+                        <p class="text-muted mb-4">
+                            Bu işlem <strong>geri alınamaz</strong>.
+                            Aşağıdaki sınav ve tüm soruları kalıcı olarak silinecektir.
                         </p>
 
-                        <dl class="row justify-content-center border rounded p-3 bg-light mx-2">
-                            <dt class="col-sm-4">Sınav Adı:</dt>
-                            <dd class="col-sm-8 fw-bold">@Model.QuizName</dd>
+                        <dl class="row quiz-info text-start p-3 mb-4">
+                            <dt class="col-5">Sınav Adı</dt>
+                            <dd class="col-7 fw-bold">@Model.QuizName</dd>
 
-                            <dt class="col-sm-4">Tür:</dt>
-                            <dd class="col-sm-8">@(Model.Genre ?? "-")</dd>
+                            <dt class="col-5">Kategori</dt>
+                            <dd class="col-7">@((Model.Genre ?? "-").Trim())</dd>
+
                         </dl>
 
-                        <form asp-action="Delete" method="post" class="mt-4 text-center">
+                        <form asp-action="Delete" method="post">
                             @Html.AntiForgeryToken()
                             <input type="hidden" asp-for="Id" />
 
                             <div class="d-grid gap-2">
-                                <input type="submit" value="Evet, Sınavı Sil" class="btn btn-danger btn-lg" />
-                                <a asp-action="Index" class="btn btn-secondary">İptal / Listeye Dön</a>
+                                <button type="submit" class="btn btn-danger btn-lg">
+                                    🗑️ Evet, Sınavı Sil
+                                </button>
+
+                                <a asp-action="Index" class="btn btn-outline-secondary">
+                                    Vazgeç / Listeye Dön
+                                </a>
                             </div>
                         </form>
 

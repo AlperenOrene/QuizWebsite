@@ -7,13 +7,30 @@
 }
 
 <style>
-    .page-scale {
-        transform: none;
-        width: 100%;
-        margin-bottom: 60px;
+    body {
+        background: #f0f2f5;
     }
 
-    input, textarea, select { max-width: 100%; }
+    .page-scale {
+        min-height: 100vh;
+        width: 100%;
+        padding: 60px 0;
+        margin: 0;
+        background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+    }
+
+    input, textarea, select {
+        max-width: 100%;
+    }
+
+    .card {
+        border-radius: 14px;
+        border: none;
+    }
+
+    .card-header {
+        border-radius: 14px 14px 0 0;
+    }
 
     .qimg {
         max-width: 320px;
@@ -35,10 +52,13 @@
         table-layout: fixed;
         width: 100%;
     }
-    .table-fixed td, .table-fixed th {
-        overflow-wrap: anywhere;
-        word-break: break-word;
-    }
+
+        .table-fixed td,
+        .table-fixed th {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
 </style>
 
 <div class="page-scale">
@@ -111,11 +131,11 @@
                                     {
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" asp-for="Quiz.IsPublic" value="true" checked id="pub">
-                                            <label class="form-check-label" for="pub">Public (herkes görebilir)</label>
+                                            <label class="form-check-label" for="pub">Public (Herkes görebilir)</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" asp-for="Quiz.IsPublic" value="false" id="priv">
-                                            <label class="form-check-label" for="priv">Kodlu (sadece kod bilen)</label>
+                                            <label class="form-check-label" for="priv">Kodlu (Sadece kodu olan)</label>
                                         </div>
                                     }
                                     else

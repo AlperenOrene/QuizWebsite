@@ -6,7 +6,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>QuizApp - Giriş</title>
+    <title>QuizApp | Giriş</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -18,77 +18,217 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #f2f2f2;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: "Segoe UI", Arial, sans-serif;
         }
 
-        .login-scale { transform: scale(1.8); transform-origin: center; }
+        .login-scale {
+            transform: scale(1.4);
+        }
 
         .login-card {
-            width: 360px;
-            border-radius: 14px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-            background: #fff;
-            padding: 22px;
+            width: 380px;
+            border-radius: 18px;
+            padding: 28px;
+            background: rgba(255,255,255,0.96);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+            animation: fadeSlideIn 0.7s ease forwards;
+        }
+
+        .app-title {
+            font-weight: 800;
         }
 
         .role-pill {
-            border: 1px solid #ddd;
+            border: 2px solid #ddd;
             border-radius: 999px;
-            padding: 8px 12px;
-            width: 100%;
+            padding: 10px;
             cursor: pointer;
+            transition: all 0.25s ease;
+            user-select: none;
         }
 
-        .role-pill input { margin-right: 8px; }
+            .role-pill input {
+                display: none;
+            }
+
+            .role-pill.active {
+                background: #667eea;
+                border-color: #667eea;
+                color: #fff;
+                box-shadow: 0 6px 16px rgba(102,126,234,0.4);
+            }
+
+        .form-control-lg {
+            border-radius: 12px;
+            padding: 12px 14px;
+        }
+
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.15rem rgba(102,126,234,0.25);
+        }
+
+        .btn-primary {
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+        }
+
+            .btn-primary:disabled {
+                opacity: 0.8;
+            }
+
+        .spinner-border {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+
+        .shake {
+            animation: shake 0.4s;
+        }
+
+        @@keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @@keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-6px);
+            }
+
+            50% {
+                transform: translateX(6px);
+            }
+
+            75% {
+                transform: translateX(-4px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
     </style>
 </head>
 <body>
-<div class="login-scale">
-    <div class="login-card">
-        <div class="text-center mb-3">
-            <h2 class="fw-bold mb-1">QuizApp</h2>
-            <div class="text-muted">Giriş Yap</div>
+
+    <div class="login-scale">
+        <div class="login-card @(ViewBag.Error != null ? "shake" : "")">
+
+            <div class="text-center mb-4">
+                <h2 class="app-title mb-1">QuizApp</h2>
+                <div class="text-muted">Hesabına giriş yap</div>
+            </div>
+
+            <form method="post"
+                  asp-controller="Login"
+                  asp-action="Login"
+                  onsubmit="startLoading()">
+
+                @Html.AntiForgeryToken()
+
+                <div class="row g-2 mb-3 text-center">
+                    <div class="col-6">
+                        <label class="role-pill active" id="egitmen">
+                            <input type="radio" name="userType" value="Egitmen" checked>
+                            👨‍🏫 Eğitmen
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label class="role-pill" id="ogrenci">
+                            <input type="radio" name="userType" value="Ogrenci">
+                            🎓 Öğrenci
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <input class="form-control form-control-lg"
+                           type="text"
+                           name="username"
+                           placeholder="Kullanıcı Adı"
+                           required />
+                </div>
+
+                <div class="mb-4 position-relative">
+                    <input id="password"
+                           class="form-control form-control-lg"
+                           type="password"
+                           name="password"
+                           placeholder="Şifre"
+                           required />
+                    <span id="eyeIcon"
+                          onclick="togglePassword()"
+                          style="position:absolute; right:14px; top:50%; transform:translateY(-50%); cursor:pointer;">
+                        👁️
+                    </span>
+                </div>
+
+                <button id="loginBtn" class="btn btn-primary btn-lg w-100">
+                    <span id="btnText">Giriş Yap</span>
+                    <span id="btnSpinner" class="spinner-border spinner-border-sm d-none"></span>
+                </button>
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger mt-3 mb-0 text-center">
+                        @ViewBag.Error
+                    </div>
+                }
+            </form>
+
         </div>
-
-        <form method="post" asp-controller="Login" asp-action="Login">
-            @Html.AntiForgeryToken()
-
-            <div class="row g-2 mb-3">
-                <div class="col-6">
-                    <label class="role-pill d-flex align-items-center justify-content-center">
-                        <input type="radio" name="userType" value="Egitmen" required checked>
-                        Eğitmen
-                    </label>
-                </div>
-                <div class="col-6">
-                    <label class="role-pill d-flex align-items-center justify-content-center">
-                        <input type="radio" name="userType" value="Ogrenci">
-                        Öğrenci
-                    </label>
-                </div>
-            </div>
-
-            <div class="mb-2">
-                <input class="form-control form-control-lg" type="text" name="username" placeholder="Kullanıcı Adı" required autocomplete="off" />
-            </div>
-
-            <div class="mb-3">
-                <input class="form-control form-control-lg" type="password" name="password" placeholder="Şifre" required />
-            </div>
-
-            <button class="btn btn-primary btn-lg w-100" type="submit">Giriş Yap</button>
-
-            @if (ViewBag.Error != null)
-            {
-                <div class="alert alert-danger mt-3 mb-0" style="font-size:14px;">
-                    @ViewBag.Error
-                </div>
-            }
-        </form>
     </div>
-</div>
 
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const egitmen = document.getElementById("egitmen");
+        const ogrenci = document.getElementById("ogrenci");
+
+        egitmen.onclick = () => {
+            egitmen.classList.add("active");
+            ogrenci.classList.remove("active");
+        };
+
+        ogrenci.onclick = () => {
+            ogrenci.classList.add("active");
+            egitmen.classList.remove("active");
+        };
+
+        function togglePassword() {
+            const password = document.getElementById("password");
+            const eye = document.getElementById("eyeIcon");
+
+            if (password.type === "password") {
+                password.type = "text";
+                eye.textContent = "🙈";
+            } else {
+                password.type = "password";
+                eye.textContent = "👁️";
+            }
+        }
+
+        function startLoading() {
+            const btn = document.getElementById("loginBtn");
+            document.getElementById("btnText").textContent = "Giriş Yapılıyor...";
+            document.getElementById("btnSpinner").classList.remove("d-none");
+            btn.disabled = true;
+        }
+    </script>
+
 </body>
 </html>
