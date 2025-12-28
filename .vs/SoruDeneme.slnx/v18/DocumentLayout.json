@@ -1,65 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\meyme\\Desktop\\Web\\Website\\",
+  "WorkspaceRootPath": "C:\\Users\\meyme\\Desktop\\Website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\quizs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\quizs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\quizs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\quizs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\quizs\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\quizs\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\quizs\\scoreboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\quizs\\scoreboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\scoreboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\quizs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\quizs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\quizs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\quizs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\quizs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\quizs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\quizs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\home\\ogrencihome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\home\\ogrencihome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\home\\ogrencihome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\views\\home\\egitmenhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\views\\home\\egitmenhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\views\\home\\egitmenhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\web\\website\\sorudeneme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|c:\\users\\meyme\\desktop\\website\\sorudeneme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{265D1903-9E83-DEBD-6870-95EA0FC7F94E}|SoruDeneme\\SoruDeneme.csproj|solutionrelative:sorudeneme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -70,32 +70,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Details.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Details.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Details.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Details.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T10:44:30.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T10:44:30.149Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Edit.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Edit.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -106,170 +101,157 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Index.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Index.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Index.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Index.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Index.cshtml",
               "ViewState": "AgIAALQAAAAAAAAAAAAAAIMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T09:37:07.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T09:37:07.925Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Scoreboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Scoreboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Scoreboard.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Scoreboard.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Scoreboard.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Scoreboard.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Scoreboard.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T10:48:07.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T10:48:07.495Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Solve.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Solve.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Solve.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Solve.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Solve.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Solve.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Solve.cshtml",
               "ViewState": "AgIAAOwAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T10:59:28.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T10:59:28.236Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\_ViewStart.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T09:51:15.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T09:51:15.579Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T09:52:54.228Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T09:52:54.228Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Delete.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Delete.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T09:35:16.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T09:35:16.025Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Create.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Quizs\\Create.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Quizs\\Create.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Quizs\\Create.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Quizs\\Create.cshtml",
               "ViewState": "AgIAAJIBAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T09:29:08.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T09:29:08.786Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Login\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Login\\Index.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Login\\Index.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Login\\Index.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Login\\Index.cshtml",
               "ViewState": "AgIAAOoAAAAAAAAAAAAAAFgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T09:14:43.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T09:14:43.579Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "OgrenciHome.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Home\\OgrenciHome.cshtml",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T09:26:53.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T09:26:53.859Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAOUAAAAAAAAAAAAAAIMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T09:25:02.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T09:25:02.62Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "EgitmenHome.cshtml",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
               "RelativeDocumentMoniker": "SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
               "RelativeToolTip": "SoruDeneme\\Views\\Home\\EgitmenHome.cshtml",
               "ViewState": "AgIAAHgAAAAAAAAAAAAAAHQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-28T09:22:25.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T09:22:25.449Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "SoruDeneme\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\wwwroot\\css\\site.css",
               "RelativeToolTip": "SoruDeneme\\wwwroot\\css\\site.css",
               "ViewState": "AgIAABoAAAAAAAAAAAAYwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-28T10:04:13.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T10:04:13.362Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Program.cs",
               "RelativeDocumentMoniker": "SoruDeneme\\Program.cs",
-              "ToolTip": "C:\\Users\\meyme\\Desktop\\Web\\Website\\SoruDeneme\\Program.cs",
+              "ToolTip": "C:\\Users\\meyme\\Desktop\\Website\\SoruDeneme\\Program.cs",
               "RelativeToolTip": "SoruDeneme\\Program.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAIwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T16:15:50.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T16:15:50.096Z"
             }
           ]
         }
