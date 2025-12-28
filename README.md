@@ -7,14 +7,11 @@ Eğitmenlerin quiz oluşturabildiği, öğrencilerin quiz çözebildiği basit v
 
 ##  Proje Ekibi
 
-- **Şevket Berat Tetik**​
-
-- **Alperen Örene**​
-
-- **Muhammed Eymen Yiğit** ​
-
-- **Mustafa Kerem Kaya**​
-
+- **Şevket Berat Tetik 23118080062**
+ **Alperen Örene 23118080006**
+ **Muhammed Eymen Yiğit 23118080087**
+ **Mustafa Kerem Kaya 23118080045**
+​
 ---
 
 ## Giriş Bilgileri
@@ -27,6 +24,7 @@ Kullanıcı adı = ogrenci
 şifre= ogrenci123
 
 ---
+
 ##  Kullanılan Teknolojiler
 
 - ASP.NET Core MVC (.NET 8)
@@ -36,6 +34,7 @@ Kullanıcı adı = ogrenci
 - Git & GitHub
 
 ---
+
 
 ## Uygulama Nasıl Çalıştırılır?
 
