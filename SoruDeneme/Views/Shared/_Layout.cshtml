@@ -12,12 +12,11 @@
 </head>
 
 @{
-        var role = Context.Session.GetString("UserRole"); // Egitmen / Ogrenci
+        var role = Context.Session.GetString("UserRole"); 
 }
 
 <body class="@ViewData["BodyClass"]">
 
-    <!-- HEADER -->
     <nav class="navbar navbar-expand-lg navbar-light app-header">
         <div class="container">
             <span class="navbar-brand fw-bold">
@@ -41,12 +40,12 @@
         </div>
     </nav>
 
-    <!-- CONTENT -->
+
     <main class="main-content">
         @RenderBody()
     </main>
 
-    <!-- FOOTER -->
+ 
     <footer class="app-footer text-center py-3">
         <small>© @DateTime.Now.Year QuizApp</small>
     </footer>
