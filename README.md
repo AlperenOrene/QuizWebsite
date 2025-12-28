@@ -1,41 +1,86 @@
-# QuizAPP
+# QuizApp
 
-Bu proje, eğitmenlerin sınav oluşturabileceği ve öğrencilerin bu sınavları çözebileceği ASP.NET Core tabanlı bir web uygulamasıdır. Veritabanı olarak SQLite kullanılmıştır ve kurulum gerektirmez.
-
-## Gereksinimler
-
-Projenin sorunsuz çalışması için aşağıdaki araçların yüklü olması önerilir:
-* **Visual Studio 2022** (Güncel sürüm önerilir)
-* **.NET SDK** (Proje sürümü ile uyumlu)
-
-## Kurulum ve Çalıştırma Adımları
-
-### 1. Projeyi Açma
-Proje dizininde yeni nesil çözüm dosyası formatı olan **`.slnx`** kullanılmıştır.
-
-* **Önerilen Yöntem:** Eğer Visual Studio sürümünüz güncelse (VS 2022 Preview veya son güncellemeler), ana dizindeki `SoruDeneme.slnx` dosyasına çift tıklayarak projeyi açabilirsiniz.
-* **Alternatif Yöntem:** Eğer `.slnx` dosyası açılmazsa veya Visual Studio tarafından tanınmazsa, `SoruDeneme` klasörü içindeki **`SoruDeneme.csproj`** dosyasını seçerek projeyi açabilirsiniz.
-
-### 2. Veritabanı Kurulumu (Otomatik)
-Proje **SQLite** veritabanı kullanmaktadır ve herhangi bir SQL Server kurulumu veya ayarı **gerektirmez**.
-
-* Uygulama ilk kez çalıştırıldığında, veritabanı dosyası (`app.db`) `App_Data` klasörü altında **otomatik olarak oluşturulacak** ve gerekli tablolar kurulacaktır.
-* Ayrıca test kullanıcıları da otomatik olarak veritabanına eklenecektir. Ekstra bir komut (Update-Database vb.) çalıştırmanıza gerek yoktur.
-
-### 3. Uygulamayı Başlatma
-* Visual Studio üst menüsündeki "Başlat" (Start) butonuna basarak veya klavyeden `F5` tuşu ile uygulmayı tarayıcıda çalıştırabilirsiniz.
+Bu proje, **ASP.NET Core MVC** kullanılarak geliştirilmiş bir **Online Quiz Uygulamasıdır**.  
+Eğitmenlerin quiz oluşturabildiği, öğrencilerin quiz çözebildiği basit ve anlaşılır bir web uygulamasıdır.
 
 ---
 
-## Giriş Bilgileri (Test Kullanıcıları)
+##  Proje Ekibi
 
-Uygulama açıldığında test edebilmeniz için aşağıdaki hazır hesaplar otomatik olarak tanımlanmıştır:
+- **Şevket Berat Tetik**​
 
-**Eğitmen K.ADI ve ŞİFRE:**  `egitmen` `egitmen123`
-**Öğrenci K.ADI ve ŞİFRE:** `ogrenci` `ogrenci123`
+- **Alperen Örene**​
+
+- **Muhammed Eymen Yiğit** ​
+
+- **Mustafa Kerem Kaya**​
 
 ---
 
-### Proje Yapısı Hakkında Notlar
-* **Yetkilendirme:** Eğitmen ve Öğrenci sayfaları `RequireRole` attribute'ları ile korunmaktadır.
-* **Veritabanı Yolu:** `appsettings.json` dosyasında Connection String tanımlıdır ve proje içerisindeki yerel bir dosyayı işaret eder.
+## Giriş Bilgileri
+**Eğitmen Giriş**
+Kullanıcı adı = egitmen 
+şifre =egitmen123
+
+**Öğrenci Giriş**
+Kullanıcı adı = ogrenci 
+şifre= ogrenci123
+
+---
+##  Kullanılan Teknolojiler
+
+- ASP.NET Core MVC (.NET 8)
+- Entity Framework Core
+- SQLite (dosya tabanlı veritabanı)
+- HTML / CSS / JavaScript
+- Git & GitHub
+
+---
+
+## Uygulama Nasıl Çalıştırılır?
+
+### 1️ Gerekli Yazılımlar
+
+Bilgisayarınızda aşağıdakiler kurulu olmalıdır:
+
+- **.NET SDK (8.0 veya uyumlu sürüm)**  
+  https://dotnet.microsoft.com/download
+
+- **Visual Studio 2022**  
+  (ASP.NET and Web Development workload seçili olmalı)
+
+---
+
+
+## 2 Çalıştırma
+- Visual Studio'yu açın.
+- **Depoyu klonla** seçeneğine basın.
+- https://github.com/AlperenOrene/QuizWebsite linki ile depoyu klonlayın.
+- Visual studio run (f5) ile çalışırtır.
+
+---
+
+### 1 Alternatif Çalıştırma 
+## 1 Depoyu Klonla
+
+```bash
+git clone https://github.com/AlperenOrene/QuizWebsite.git
+```
+
+## 2 Projeyi Aç
+- Visual Studio'yu aç.
+- **Open a project or solution** seç.
+-  **`SoruDeneme.slnx`** dosyasını aç.
+
+
+
+## 3 Uygulamayı Çalıştır
+- Visual studio run (f5) ile çalışır.
+- Site otomatik açılır. (Açılmazsa 'http://localhost:5000' konsolda çıkan bu linkle açılabilir.)
+
+---
+
+## Önemli Notlar
+- Proje eğitim içindir.
+- Giriş kısımları test sürümü olduğu için basit tutulmuştur.
+- SQLite tercih edilerek proje kolay çalışır haldedir.
