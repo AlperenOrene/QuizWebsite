@@ -62,7 +62,7 @@ Bilgisayarınızda aşağıdakiler kurulu olmalıdır:
 
 ---
 
-### 1 Alternatif Çalıştırma 
+### Alternatif Çalıştırma 
 ## 1 Depoyu Klonla
 
 ```bash
