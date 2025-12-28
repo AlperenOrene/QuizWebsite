@@ -14,7 +14,6 @@ Eğitmenlerin quiz oluşturabildiği, öğrencilerin quiz çözebildiği basit v
 - **Muhammed Eymen Yiğit 23118080087**
 
 - **Mustafa Kerem Kaya 23118080045**
-
 ​
 ---
 
