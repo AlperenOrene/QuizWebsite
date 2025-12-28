@@ -8,9 +8,9 @@ Eğitmenlerin quiz oluşturabildiği, öğrencilerin quiz çözebildiği basit v
 ##  Proje Ekibi
 
 - **Şevket Berat Tetik 23118080062**
- **Alperen Örene 23118080006**
- **Muhammed Eymen Yiğit 23118080087**
- **Mustafa Kerem Kaya 23118080045**
+-**Alperen Örene 23118080006**
+-**Muhammed Eymen Yiğit 23118080087**
+-**Mustafa Kerem Kaya 23118080045**
 ​
 ---
 
