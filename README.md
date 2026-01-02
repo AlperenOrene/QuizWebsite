@@ -30,7 +30,7 @@ Kullanıcı adı = ogrenci
 
 ##  Kullanılan Teknolojiler
 
-- ASP.NET Core MVC (.NET 8)
+- ASP.NET Core MVC (.NET 10.0)
 - Entity Framework Core
 - SQLite (dosya tabanlı veritabanı)
 - HTML / CSS / JavaScript
@@ -45,7 +45,7 @@ Kullanıcı adı = ogrenci
 
 Bilgisayarınızda aşağıdakiler kurulu olmalıdır:
 
-- **.NET SDK (8.0 veya uyumlu sürüm)**  
+- **.NET SDK (10.0 veya uyumlu sürüm)**  
   https://dotnet.microsoft.com/download
 
 - **Visual Studio 2022**  
